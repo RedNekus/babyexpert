@@ -83,7 +83,7 @@ class Catalog_Controller {
 		$table .= ' JOIN '.get_table('maker').' as t3 ON t1.id_maker = t3.id';
 		$table .= ' JOIN '.get_table('prefix').' as t4 ON t1.id_prefix = t4.id';
 		if($sidx == 'id_maker') {
-			$sidx = 'marker_name';
+			$sidx = 'maker_name';
 		} else if($sidx == 'name') {
 			$sidx = 'product_name';
 		} else {

@@ -20454,3 +20454,1523 @@ $_SESSION = Array
     [rand_code] => 7nds
 )
 ==================================
+==================================
+Date: 04-02-2020 17:58:14
+Message: Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'marker_name' in 'order clause'
+)
+
+==================================
+==================================
+Date: 04-02-2020 17:58:14
+Type: E_USER_ERROR
+Message: Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50
+File: /home/k/ksmedia/testing/public_html/system/models/Database.php
+Line: 134
+------------------
+VARS
+
+$_SERVER = Array
+(
+    [REDIRECT_UNIQUE_ID] => XjmGhgVlnFsAAJzB4IUAAAAq
+    [REDIRECT_MMDB_ADDR] => 93.84.140.203
+    [REDIRECT_GEOIP_ADDR] => 93.84.140.203
+    [REDIRECT_MMDB_INFO] => result found
+    [REDIRECT_GEOIP_CITY] => Minsk
+    [REDIRECT_GEOIP_LONGITUDE] => 27.56670
+    [REDIRECT_GEOIP_CONTINENT_CODE] => EU
+    [REDIRECT_GEOIP_LATITUDE] => 53.90000
+    [REDIRECT_GEOIP_POSTAL_CODE] => 220014
+    [REDIRECT_GEOIP_COUNTRY_CODE] => BY
+    [REDIRECT_GEOIP_COUNTRY_NAME] => Belarus
+    [REDIRECT_GEOIP_REGION] => HM
+    [REDIRECT_PERL_USE_UNSAFE_INC] => 1
+    [REDIRECT_STATUS] => 200
+    [UNIQUE_ID] => XjmGhgVlnFsAAJzB4IUAAAAq
+    [MMDB_ADDR] => 93.84.140.203
+    [GEOIP_ADDR] => 93.84.140.203
+    [MMDB_INFO] => result found
+    [GEOIP_CITY] => Minsk
+    [GEOIP_LONGITUDE] => 27.56670
+    [GEOIP_CONTINENT_CODE] => EU
+    [GEOIP_LATITUDE] => 53.90000
+    [GEOIP_POSTAL_CODE] => 220014
+    [GEOIP_COUNTRY_CODE] => BY
+    [GEOIP_COUNTRY_NAME] => Belarus
+    [GEOIP_REGION] => HM
+    [PERL_USE_UNSAFE_INC] => 1
+    [HTTP_HOST] => 24med.magur.by
+    [HTTP_X_SERVER_ADDR] => 5.101.152.91
+    [HTTP_X_FORWARDED_PROTO] => http
+    [HTTP_X_REAL_IP] => 93.84.140.203
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+    [HTTP_ACCEPT] => application/json, text/javascript, */*; q=0.01
+    [HTTP_ACCEPT_LANGUAGE] => ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_REFERER] => http://24med.magur.by/adminpanel/catalog/
+    [HTTP_COOKIE] => treeview=1000000001000000000; _ym_uid=1575884322650103883; _ym_d=1575884322; _ga=GA1.2.1927859429.1580735335; jv_visits_count_1HlKUKycJ7=1; beget=begetok; PHPSESSID=1daec787d4a093f792d399b20d65c9a1
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.10 (Unix) Server at 24med.magur.by Port 80</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.10 (Unix)
+    [SERVER_NAME] => 24med.magur.by
+    [SERVER_ADDR] => 5.101.152.91
+    [SERVER_PORT] => 80
+    [REQUEST_SCHEME] => http
+    [REMOTE_ADDR] => 93.84.140.203
+    [DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [SERVER_ADMIN] => webmaster@24med.magur.by
+    [SCRIPT_FILENAME] => /home/k/ksmedia/testing/public_html/index.php
+    [REMOTE_PORT] => 32987
+    [REDIRECT_QUERY_STRING] => _search=false&nd=1580828294032&rows=50&page=1&sidx=id_maker&sord=asc
+    [REDIRECT_URL] => /adminpanel/catalog/load
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => _search=false&nd=1580828294032&rows=50&page=1&sidx=id_maker&sord=asc
+    [REQUEST_URI] => /adminpanel/catalog/load?_search=false&nd=1580828294032&rows=50&page=1&sidx=id_maker&sord=asc
+    [SCRIPT_NAME] => /index.php
+    [PATH_INFO] => /adminpanel/catalog/load
+    [PATH_TRANSLATED] => redirect:/index.php/adminpanel/catalog/load/catalog/load
+    [PHP_SELF] => /index.php/adminpanel/catalog/load
+    [REQUEST_TIME_FLOAT] => 1580828294.087
+    [REQUEST_TIME] => 1580828294
+    [argv] => Array
+        (
+            [0] => _search=false&nd=1580828294032&rows=50&page=1&sidx=id_maker&sord=asc
+        )
+
+    [argc] => 1
+)
+
+$_GET = Array
+(
+    [_search] => false
+    [nd] => 1580828294032
+    [rows] => 50
+    [page] => 1
+    [sidx] => id_maker
+    [sord] => asc
+)
+
+$_POST = Array
+(
+)
+
+$_COOKIE = Array
+(
+    [treeview] => 1000000001000000000
+    [_ym_uid] => 1575884322650103883
+    [_ym_d] => 1575884322
+    [_ga] => GA1.2.1927859429.1580735335
+    [jv_visits_count_1HlKUKycJ7] => 1
+    [beget] => begetok
+    [PHPSESSID] => 1daec787d4a093f792d399b20d65c9a1
+)
+
+$_SESSION = Array
+(
+    [currency] => byr
+    [isLoggedIn] => Array
+        (
+            [id] => 38
+            [login] => faber
+            [password] => 7191455cce59a49be930b2e4eb913b8f
+            [email] => 
+            [fio] => Фабер
+            [active] => 1
+            [id_access] => 2
+            [id_courier] => 0
+            [id_kassa] => 
+            [id_kassa_tree] => 0
+            [id_manager] => 0
+        )
+
+    [row_sorted] => prioritet-DESC
+    [vmode] => grid
+    [rand_code] => 7nds
+)
+------------------
+TRACE
+
+#0  Log::getDebugBacktrace() called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:171]
+#1  Log::_getLogErrorMessage(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134) called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:62]
+#2  Log::myErrorHandler(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134, Array ([table] => np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id,[order_name] => t1.active desc, marker_name,[order] => asc,[limit] => 0, 50,[where] => (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1),[group] =>  GROUP BY t1.id,[fields] => t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name,[sql] => SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50,[items] => ))
+#3  trigger_error(Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50, 256) called at [/home/k/ksmedia/testing/public_html/system/models/Database.php:134]
+#4  Database::getRows(np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id, t1.active desc, marker_name, asc, 0, 50, (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1), t1.id, t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name) called at [/home/k/ksmedia/testing/public_html/system/controllers/adminpanel/catalog_controller.php:104]
+#5  Catalog_Controller->loadAction() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:46]
+#6  Load::controller(adminpanel/catalog, loadAction) called at [/home/k/ksmedia/testing/public_html/system/controllers/main_controller.php:25]
+#7  Main_Controller->__construct() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:39]
+#8  Load::controller(main) called at [/home/k/ksmedia/testing/public_html/index.php:93]
+==================================
+==================================
+Date: 04-02-2020 17:58:17
+Message: Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'marker_name' in 'order clause'
+)
+
+==================================
+==================================
+Date: 04-02-2020 17:58:17
+Type: E_USER_ERROR
+Message: Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50
+File: /home/k/ksmedia/testing/public_html/system/models/Database.php
+Line: 134
+------------------
+VARS
+
+$_SERVER = Array
+(
+    [REDIRECT_UNIQUE_ID] => XjmGiQVlnFsAAJcnvRwAAAAI
+    [REDIRECT_MMDB_ADDR] => 93.84.140.203
+    [REDIRECT_GEOIP_ADDR] => 93.84.140.203
+    [REDIRECT_MMDB_INFO] => result found
+    [REDIRECT_GEOIP_CITY] => Minsk
+    [REDIRECT_GEOIP_LONGITUDE] => 27.56670
+    [REDIRECT_GEOIP_CONTINENT_CODE] => EU
+    [REDIRECT_GEOIP_LATITUDE] => 53.90000
+    [REDIRECT_GEOIP_POSTAL_CODE] => 220014
+    [REDIRECT_GEOIP_COUNTRY_CODE] => BY
+    [REDIRECT_GEOIP_COUNTRY_NAME] => Belarus
+    [REDIRECT_GEOIP_REGION] => HM
+    [REDIRECT_PERL_USE_UNSAFE_INC] => 1
+    [REDIRECT_STATUS] => 200
+    [UNIQUE_ID] => XjmGiQVlnFsAAJcnvRwAAAAI
+    [MMDB_ADDR] => 93.84.140.203
+    [GEOIP_ADDR] => 93.84.140.203
+    [MMDB_INFO] => result found
+    [GEOIP_CITY] => Minsk
+    [GEOIP_LONGITUDE] => 27.56670
+    [GEOIP_CONTINENT_CODE] => EU
+    [GEOIP_LATITUDE] => 53.90000
+    [GEOIP_POSTAL_CODE] => 220014
+    [GEOIP_COUNTRY_CODE] => BY
+    [GEOIP_COUNTRY_NAME] => Belarus
+    [GEOIP_REGION] => HM
+    [PERL_USE_UNSAFE_INC] => 1
+    [HTTP_HOST] => 24med.magur.by
+    [HTTP_X_SERVER_ADDR] => 5.101.152.91
+    [HTTP_X_FORWARDED_PROTO] => http
+    [HTTP_X_REAL_IP] => 93.84.140.203
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+    [HTTP_ACCEPT] => application/json, text/javascript, */*; q=0.01
+    [HTTP_ACCEPT_LANGUAGE] => ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_REFERER] => http://24med.magur.by/adminpanel/catalog/
+    [HTTP_COOKIE] => treeview=1000000001000000000; _ym_uid=1575884322650103883; _ym_d=1575884322; _ga=GA1.2.1927859429.1580735335; jv_visits_count_1HlKUKycJ7=1; beget=begetok; PHPSESSID=1daec787d4a093f792d399b20d65c9a1
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.10 (Unix) Server at 24med.magur.by Port 80</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.10 (Unix)
+    [SERVER_NAME] => 24med.magur.by
+    [SERVER_ADDR] => 5.101.152.91
+    [SERVER_PORT] => 80
+    [REQUEST_SCHEME] => http
+    [REMOTE_ADDR] => 93.84.140.203
+    [DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [SERVER_ADMIN] => webmaster@24med.magur.by
+    [SCRIPT_FILENAME] => /home/k/ksmedia/testing/public_html/index.php
+    [REMOTE_PORT] => 33767
+    [REDIRECT_QUERY_STRING] => _search=false&nd=1580828297621&rows=50&page=1&sidx=id_maker&sord=desc
+    [REDIRECT_URL] => /adminpanel/catalog/load
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => _search=false&nd=1580828297621&rows=50&page=1&sidx=id_maker&sord=desc
+    [REQUEST_URI] => /adminpanel/catalog/load?_search=false&nd=1580828297621&rows=50&page=1&sidx=id_maker&sord=desc
+    [SCRIPT_NAME] => /index.php
+    [PATH_INFO] => /adminpanel/catalog/load
+    [PATH_TRANSLATED] => redirect:/index.php/adminpanel/catalog/load/catalog/load
+    [PHP_SELF] => /index.php/adminpanel/catalog/load
+    [REQUEST_TIME_FLOAT] => 1580828297.687
+    [REQUEST_TIME] => 1580828297
+    [argv] => Array
+        (
+            [0] => _search=false&nd=1580828297621&rows=50&page=1&sidx=id_maker&sord=desc
+        )
+
+    [argc] => 1
+)
+
+$_GET = Array
+(
+    [_search] => false
+    [nd] => 1580828297621
+    [rows] => 50
+    [page] => 1
+    [sidx] => id_maker
+    [sord] => desc
+)
+
+$_POST = Array
+(
+)
+
+$_COOKIE = Array
+(
+    [treeview] => 1000000001000000000
+    [_ym_uid] => 1575884322650103883
+    [_ym_d] => 1575884322
+    [_ga] => GA1.2.1927859429.1580735335
+    [jv_visits_count_1HlKUKycJ7] => 1
+    [beget] => begetok
+    [PHPSESSID] => 1daec787d4a093f792d399b20d65c9a1
+)
+
+$_SESSION = Array
+(
+    [currency] => byr
+    [isLoggedIn] => Array
+        (
+            [id] => 38
+            [login] => faber
+            [password] => 7191455cce59a49be930b2e4eb913b8f
+            [email] => 
+            [fio] => Фабер
+            [active] => 1
+            [id_access] => 2
+            [id_courier] => 0
+            [id_kassa] => 
+            [id_kassa_tree] => 0
+            [id_manager] => 0
+        )
+
+    [row_sorted] => prioritet-DESC
+    [vmode] => grid
+    [rand_code] => 7nds
+)
+------------------
+TRACE
+
+#0  Log::getDebugBacktrace() called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:171]
+#1  Log::_getLogErrorMessage(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134) called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:62]
+#2  Log::myErrorHandler(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134, Array ([table] => np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id,[order_name] => t1.active desc, marker_name,[order] => desc,[limit] => 0, 50,[where] => (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1),[group] =>  GROUP BY t1.id,[fields] => t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name,[sql] => SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50,[items] => ))
+#3  trigger_error(Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50, 256) called at [/home/k/ksmedia/testing/public_html/system/models/Database.php:134]
+#4  Database::getRows(np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id, t1.active desc, marker_name, desc, 0, 50, (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1), t1.id, t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name) called at [/home/k/ksmedia/testing/public_html/system/controllers/adminpanel/catalog_controller.php:104]
+#5  Catalog_Controller->loadAction() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:46]
+#6  Load::controller(adminpanel/catalog, loadAction) called at [/home/k/ksmedia/testing/public_html/system/controllers/main_controller.php:25]
+#7  Main_Controller->__construct() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:39]
+#8  Load::controller(main) called at [/home/k/ksmedia/testing/public_html/index.php:93]
+==================================
+==================================
+Date: 04-02-2020 17:58:18
+Message: Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'marker_name' in 'order clause'
+)
+
+==================================
+==================================
+Date: 04-02-2020 17:58:18
+Type: E_USER_ERROR
+Message: Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50
+File: /home/k/ksmedia/testing/public_html/system/models/Database.php
+Line: 134
+------------------
+VARS
+
+$_SERVER = Array
+(
+    [REDIRECT_UNIQUE_ID] => XjmGigVlnFsAAJuRHIUAAAAK
+    [REDIRECT_MMDB_ADDR] => 93.84.140.203
+    [REDIRECT_GEOIP_ADDR] => 93.84.140.203
+    [REDIRECT_MMDB_INFO] => result found
+    [REDIRECT_GEOIP_CITY] => Minsk
+    [REDIRECT_GEOIP_LONGITUDE] => 27.56670
+    [REDIRECT_GEOIP_CONTINENT_CODE] => EU
+    [REDIRECT_GEOIP_LATITUDE] => 53.90000
+    [REDIRECT_GEOIP_POSTAL_CODE] => 220014
+    [REDIRECT_GEOIP_COUNTRY_CODE] => BY
+    [REDIRECT_GEOIP_COUNTRY_NAME] => Belarus
+    [REDIRECT_GEOIP_REGION] => HM
+    [REDIRECT_PERL_USE_UNSAFE_INC] => 1
+    [REDIRECT_STATUS] => 200
+    [UNIQUE_ID] => XjmGigVlnFsAAJuRHIUAAAAK
+    [MMDB_ADDR] => 93.84.140.203
+    [GEOIP_ADDR] => 93.84.140.203
+    [MMDB_INFO] => result found
+    [GEOIP_CITY] => Minsk
+    [GEOIP_LONGITUDE] => 27.56670
+    [GEOIP_CONTINENT_CODE] => EU
+    [GEOIP_LATITUDE] => 53.90000
+    [GEOIP_POSTAL_CODE] => 220014
+    [GEOIP_COUNTRY_CODE] => BY
+    [GEOIP_COUNTRY_NAME] => Belarus
+    [GEOIP_REGION] => HM
+    [PERL_USE_UNSAFE_INC] => 1
+    [HTTP_HOST] => 24med.magur.by
+    [HTTP_X_SERVER_ADDR] => 5.101.152.91
+    [HTTP_X_FORWARDED_PROTO] => http
+    [HTTP_X_REAL_IP] => 93.84.140.203
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+    [HTTP_ACCEPT] => application/json, text/javascript, */*; q=0.01
+    [HTTP_ACCEPT_LANGUAGE] => ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_REFERER] => http://24med.magur.by/adminpanel/catalog/
+    [HTTP_COOKIE] => treeview=1000000001000000000; _ym_uid=1575884322650103883; _ym_d=1575884322; _ga=GA1.2.1927859429.1580735335; jv_visits_count_1HlKUKycJ7=1; beget=begetok; PHPSESSID=1daec787d4a093f792d399b20d65c9a1
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.10 (Unix) Server at 24med.magur.by Port 80</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.10 (Unix)
+    [SERVER_NAME] => 24med.magur.by
+    [SERVER_ADDR] => 5.101.152.91
+    [SERVER_PORT] => 80
+    [REQUEST_SCHEME] => http
+    [REMOTE_ADDR] => 93.84.140.203
+    [DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [SERVER_ADMIN] => webmaster@24med.magur.by
+    [SCRIPT_FILENAME] => /home/k/ksmedia/testing/public_html/index.php
+    [REMOTE_PORT] => 34037
+    [REDIRECT_QUERY_STRING] => _search=false&nd=1580828298814&rows=50&page=1&sidx=id_maker&sord=asc
+    [REDIRECT_URL] => /adminpanel/catalog/load
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => _search=false&nd=1580828298814&rows=50&page=1&sidx=id_maker&sord=asc
+    [REQUEST_URI] => /adminpanel/catalog/load?_search=false&nd=1580828298814&rows=50&page=1&sidx=id_maker&sord=asc
+    [SCRIPT_NAME] => /index.php
+    [PATH_INFO] => /adminpanel/catalog/load
+    [PATH_TRANSLATED] => redirect:/index.php/adminpanel/catalog/load/catalog/load
+    [PHP_SELF] => /index.php/adminpanel/catalog/load
+    [REQUEST_TIME_FLOAT] => 1580828298.868
+    [REQUEST_TIME] => 1580828298
+    [argv] => Array
+        (
+            [0] => _search=false&nd=1580828298814&rows=50&page=1&sidx=id_maker&sord=asc
+        )
+
+    [argc] => 1
+)
+
+$_GET = Array
+(
+    [_search] => false
+    [nd] => 1580828298814
+    [rows] => 50
+    [page] => 1
+    [sidx] => id_maker
+    [sord] => asc
+)
+
+$_POST = Array
+(
+)
+
+$_COOKIE = Array
+(
+    [treeview] => 1000000001000000000
+    [_ym_uid] => 1575884322650103883
+    [_ym_d] => 1575884322
+    [_ga] => GA1.2.1927859429.1580735335
+    [jv_visits_count_1HlKUKycJ7] => 1
+    [beget] => begetok
+    [PHPSESSID] => 1daec787d4a093f792d399b20d65c9a1
+)
+
+$_SESSION = Array
+(
+    [currency] => byr
+    [isLoggedIn] => Array
+        (
+            [id] => 38
+            [login] => faber
+            [password] => 7191455cce59a49be930b2e4eb913b8f
+            [email] => 
+            [fio] => Фабер
+            [active] => 1
+            [id_access] => 2
+            [id_courier] => 0
+            [id_kassa] => 
+            [id_kassa_tree] => 0
+            [id_manager] => 0
+        )
+
+    [row_sorted] => prioritet-DESC
+    [vmode] => grid
+    [rand_code] => 7nds
+)
+------------------
+TRACE
+
+#0  Log::getDebugBacktrace() called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:171]
+#1  Log::_getLogErrorMessage(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134) called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:62]
+#2  Log::myErrorHandler(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134, Array ([table] => np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id,[order_name] => t1.active desc, marker_name,[order] => asc,[limit] => 0, 50,[where] => (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1),[group] =>  GROUP BY t1.id,[fields] => t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name,[sql] => SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50,[items] => ))
+#3  trigger_error(Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50, 256) called at [/home/k/ksmedia/testing/public_html/system/models/Database.php:134]
+#4  Database::getRows(np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id, t1.active desc, marker_name, asc, 0, 50, (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1), t1.id, t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name) called at [/home/k/ksmedia/testing/public_html/system/controllers/adminpanel/catalog_controller.php:104]
+#5  Catalog_Controller->loadAction() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:46]
+#6  Load::controller(adminpanel/catalog, loadAction) called at [/home/k/ksmedia/testing/public_html/system/controllers/main_controller.php:25]
+#7  Main_Controller->__construct() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:39]
+#8  Load::controller(main) called at [/home/k/ksmedia/testing/public_html/index.php:93]
+==================================
+==================================
+Date: 04-02-2020 17:58:20
+Message: Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'marker_name' in 'order clause'
+)
+
+==================================
+==================================
+Date: 04-02-2020 17:58:20
+Type: E_USER_ERROR
+Message: Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50
+File: /home/k/ksmedia/testing/public_html/system/models/Database.php
+Line: 134
+------------------
+VARS
+
+$_SERVER = Array
+(
+    [REDIRECT_UNIQUE_ID] => XjmGjAVlnFsAAJLWgv4AAAAX
+    [REDIRECT_MMDB_ADDR] => 93.84.140.203
+    [REDIRECT_GEOIP_ADDR] => 93.84.140.203
+    [REDIRECT_MMDB_INFO] => result found
+    [REDIRECT_GEOIP_CITY] => Minsk
+    [REDIRECT_GEOIP_LONGITUDE] => 27.56670
+    [REDIRECT_GEOIP_CONTINENT_CODE] => EU
+    [REDIRECT_GEOIP_LATITUDE] => 53.90000
+    [REDIRECT_GEOIP_POSTAL_CODE] => 220014
+    [REDIRECT_GEOIP_COUNTRY_CODE] => BY
+    [REDIRECT_GEOIP_COUNTRY_NAME] => Belarus
+    [REDIRECT_GEOIP_REGION] => HM
+    [REDIRECT_PERL_USE_UNSAFE_INC] => 1
+    [REDIRECT_STATUS] => 200
+    [UNIQUE_ID] => XjmGjAVlnFsAAJLWgv4AAAAX
+    [MMDB_ADDR] => 93.84.140.203
+    [GEOIP_ADDR] => 93.84.140.203
+    [MMDB_INFO] => result found
+    [GEOIP_CITY] => Minsk
+    [GEOIP_LONGITUDE] => 27.56670
+    [GEOIP_CONTINENT_CODE] => EU
+    [GEOIP_LATITUDE] => 53.90000
+    [GEOIP_POSTAL_CODE] => 220014
+    [GEOIP_COUNTRY_CODE] => BY
+    [GEOIP_COUNTRY_NAME] => Belarus
+    [GEOIP_REGION] => HM
+    [PERL_USE_UNSAFE_INC] => 1
+    [HTTP_HOST] => 24med.magur.by
+    [HTTP_X_SERVER_ADDR] => 5.101.152.91
+    [HTTP_X_FORWARDED_PROTO] => http
+    [HTTP_X_REAL_IP] => 93.84.140.203
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+    [HTTP_ACCEPT] => application/json, text/javascript, */*; q=0.01
+    [HTTP_ACCEPT_LANGUAGE] => ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_REFERER] => http://24med.magur.by/adminpanel/catalog/
+    [HTTP_COOKIE] => treeview=1000000001000000000; _ym_uid=1575884322650103883; _ym_d=1575884322; _ga=GA1.2.1927859429.1580735335; jv_visits_count_1HlKUKycJ7=1; beget=begetok; PHPSESSID=1daec787d4a093f792d399b20d65c9a1
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.10 (Unix) Server at 24med.magur.by Port 80</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.10 (Unix)
+    [SERVER_NAME] => 24med.magur.by
+    [SERVER_ADDR] => 5.101.152.91
+    [SERVER_PORT] => 80
+    [REQUEST_SCHEME] => http
+    [REMOTE_ADDR] => 93.84.140.203
+    [DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [SERVER_ADMIN] => webmaster@24med.magur.by
+    [SCRIPT_FILENAME] => /home/k/ksmedia/testing/public_html/index.php
+    [REMOTE_PORT] => 34281
+    [REDIRECT_QUERY_STRING] => _search=false&nd=1580828300046&rows=50&page=1&sidx=id_maker&sord=desc
+    [REDIRECT_URL] => /adminpanel/catalog/load
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => _search=false&nd=1580828300046&rows=50&page=1&sidx=id_maker&sord=desc
+    [REQUEST_URI] => /adminpanel/catalog/load?_search=false&nd=1580828300046&rows=50&page=1&sidx=id_maker&sord=desc
+    [SCRIPT_NAME] => /index.php
+    [PATH_INFO] => /adminpanel/catalog/load
+    [PATH_TRANSLATED] => redirect:/index.php/adminpanel/catalog/load/catalog/load
+    [PHP_SELF] => /index.php/adminpanel/catalog/load
+    [REQUEST_TIME_FLOAT] => 1580828300.094
+    [REQUEST_TIME] => 1580828300
+    [argv] => Array
+        (
+            [0] => _search=false&nd=1580828300046&rows=50&page=1&sidx=id_maker&sord=desc
+        )
+
+    [argc] => 1
+)
+
+$_GET = Array
+(
+    [_search] => false
+    [nd] => 1580828300046
+    [rows] => 50
+    [page] => 1
+    [sidx] => id_maker
+    [sord] => desc
+)
+
+$_POST = Array
+(
+)
+
+$_COOKIE = Array
+(
+    [treeview] => 1000000001000000000
+    [_ym_uid] => 1575884322650103883
+    [_ym_d] => 1575884322
+    [_ga] => GA1.2.1927859429.1580735335
+    [jv_visits_count_1HlKUKycJ7] => 1
+    [beget] => begetok
+    [PHPSESSID] => 1daec787d4a093f792d399b20d65c9a1
+)
+
+$_SESSION = Array
+(
+    [currency] => byr
+    [isLoggedIn] => Array
+        (
+            [id] => 38
+            [login] => faber
+            [password] => 7191455cce59a49be930b2e4eb913b8f
+            [email] => 
+            [fio] => Фабер
+            [active] => 1
+            [id_access] => 2
+            [id_courier] => 0
+            [id_kassa] => 
+            [id_kassa_tree] => 0
+            [id_manager] => 0
+        )
+
+    [row_sorted] => prioritet-DESC
+    [vmode] => grid
+    [rand_code] => 7nds
+)
+------------------
+TRACE
+
+#0  Log::getDebugBacktrace() called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:171]
+#1  Log::_getLogErrorMessage(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134) called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:62]
+#2  Log::myErrorHandler(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134, Array ([table] => np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id,[order_name] => t1.active desc, marker_name,[order] => desc,[limit] => 0, 50,[where] => (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1),[group] =>  GROUP BY t1.id,[fields] => t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name,[sql] => SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50,[items] => ))
+#3  trigger_error(Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50, 256) called at [/home/k/ksmedia/testing/public_html/system/models/Database.php:134]
+#4  Database::getRows(np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id, t1.active desc, marker_name, desc, 0, 50, (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1), t1.id, t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name) called at [/home/k/ksmedia/testing/public_html/system/controllers/adminpanel/catalog_controller.php:104]
+#5  Catalog_Controller->loadAction() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:46]
+#6  Load::controller(adminpanel/catalog, loadAction) called at [/home/k/ksmedia/testing/public_html/system/controllers/main_controller.php:25]
+#7  Main_Controller->__construct() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:39]
+#8  Load::controller(main) called at [/home/k/ksmedia/testing/public_html/index.php:93]
+==================================
+==================================
+Date: 04-02-2020 17:58:23
+Message: Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'marker_name' in 'order clause'
+)
+
+==================================
+==================================
+Date: 04-02-2020 17:58:23
+Type: E_USER_ERROR
+Message: Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50
+File: /home/k/ksmedia/testing/public_html/system/models/Database.php
+Line: 134
+------------------
+VARS
+
+$_SERVER = Array
+(
+    [REDIRECT_UNIQUE_ID] => XjmGjwVlnFsAAJyQVVsAAAAA
+    [REDIRECT_MMDB_ADDR] => 93.84.140.203
+    [REDIRECT_GEOIP_ADDR] => 93.84.140.203
+    [REDIRECT_MMDB_INFO] => result found
+    [REDIRECT_GEOIP_CITY] => Minsk
+    [REDIRECT_GEOIP_LONGITUDE] => 27.56670
+    [REDIRECT_GEOIP_CONTINENT_CODE] => EU
+    [REDIRECT_GEOIP_LATITUDE] => 53.90000
+    [REDIRECT_GEOIP_POSTAL_CODE] => 220014
+    [REDIRECT_GEOIP_COUNTRY_CODE] => BY
+    [REDIRECT_GEOIP_COUNTRY_NAME] => Belarus
+    [REDIRECT_GEOIP_REGION] => HM
+    [REDIRECT_PERL_USE_UNSAFE_INC] => 1
+    [REDIRECT_STATUS] => 200
+    [UNIQUE_ID] => XjmGjwVlnFsAAJyQVVsAAAAA
+    [MMDB_ADDR] => 93.84.140.203
+    [GEOIP_ADDR] => 93.84.140.203
+    [MMDB_INFO] => result found
+    [GEOIP_CITY] => Minsk
+    [GEOIP_LONGITUDE] => 27.56670
+    [GEOIP_CONTINENT_CODE] => EU
+    [GEOIP_LATITUDE] => 53.90000
+    [GEOIP_POSTAL_CODE] => 220014
+    [GEOIP_COUNTRY_CODE] => BY
+    [GEOIP_COUNTRY_NAME] => Belarus
+    [GEOIP_REGION] => HM
+    [PERL_USE_UNSAFE_INC] => 1
+    [HTTP_HOST] => 24med.magur.by
+    [HTTP_X_SERVER_ADDR] => 5.101.152.91
+    [HTTP_X_FORWARDED_PROTO] => http
+    [HTTP_X_REAL_IP] => 93.84.140.203
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+    [HTTP_ACCEPT] => application/json, text/javascript, */*; q=0.01
+    [HTTP_ACCEPT_LANGUAGE] => ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_REFERER] => http://24med.magur.by/adminpanel/catalog/
+    [HTTP_COOKIE] => treeview=1000000001000000000; _ym_uid=1575884322650103883; _ym_d=1575884322; _ga=GA1.2.1927859429.1580735335; jv_visits_count_1HlKUKycJ7=1; beget=begetok; PHPSESSID=1daec787d4a093f792d399b20d65c9a1
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.10 (Unix) Server at 24med.magur.by Port 80</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.10 (Unix)
+    [SERVER_NAME] => 24med.magur.by
+    [SERVER_ADDR] => 5.101.152.91
+    [SERVER_PORT] => 80
+    [REQUEST_SCHEME] => http
+    [REMOTE_ADDR] => 93.84.140.203
+    [DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [SERVER_ADMIN] => webmaster@24med.magur.by
+    [SCRIPT_FILENAME] => /home/k/ksmedia/testing/public_html/index.php
+    [REMOTE_PORT] => 35177
+    [REDIRECT_QUERY_STRING] => _search=false&nd=1580828303325&rows=50&page=1&sidx=id_maker&sord=asc
+    [REDIRECT_URL] => /adminpanel/catalog/load
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => _search=false&nd=1580828303325&rows=50&page=1&sidx=id_maker&sord=asc
+    [REQUEST_URI] => /adminpanel/catalog/load?_search=false&nd=1580828303325&rows=50&page=1&sidx=id_maker&sord=asc
+    [SCRIPT_NAME] => /index.php
+    [PATH_INFO] => /adminpanel/catalog/load
+    [PATH_TRANSLATED] => redirect:/index.php/adminpanel/catalog/load/catalog/load
+    [PHP_SELF] => /index.php/adminpanel/catalog/load
+    [REQUEST_TIME_FLOAT] => 1580828303.372
+    [REQUEST_TIME] => 1580828303
+    [argv] => Array
+        (
+            [0] => _search=false&nd=1580828303325&rows=50&page=1&sidx=id_maker&sord=asc
+        )
+
+    [argc] => 1
+)
+
+$_GET = Array
+(
+    [_search] => false
+    [nd] => 1580828303325
+    [rows] => 50
+    [page] => 1
+    [sidx] => id_maker
+    [sord] => asc
+)
+
+$_POST = Array
+(
+)
+
+$_COOKIE = Array
+(
+    [treeview] => 1000000001000000000
+    [_ym_uid] => 1575884322650103883
+    [_ym_d] => 1575884322
+    [_ga] => GA1.2.1927859429.1580735335
+    [jv_visits_count_1HlKUKycJ7] => 1
+    [beget] => begetok
+    [PHPSESSID] => 1daec787d4a093f792d399b20d65c9a1
+)
+
+$_SESSION = Array
+(
+    [currency] => byr
+    [isLoggedIn] => Array
+        (
+            [id] => 38
+            [login] => faber
+            [password] => 7191455cce59a49be930b2e4eb913b8f
+            [email] => 
+            [fio] => Фабер
+            [active] => 1
+            [id_access] => 2
+            [id_courier] => 0
+            [id_kassa] => 
+            [id_kassa_tree] => 0
+            [id_manager] => 0
+        )
+
+    [row_sorted] => prioritet-DESC
+    [vmode] => grid
+    [rand_code] => 7nds
+)
+------------------
+TRACE
+
+#0  Log::getDebugBacktrace() called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:171]
+#1  Log::_getLogErrorMessage(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134) called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:62]
+#2  Log::myErrorHandler(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134, Array ([table] => np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id,[order_name] => t1.active desc, marker_name,[order] => asc,[limit] => 0, 50,[where] => (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1),[group] =>  GROUP BY t1.id,[fields] => t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name,[sql] => SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50,[items] => ))
+#3  trigger_error(Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50, 256) called at [/home/k/ksmedia/testing/public_html/system/models/Database.php:134]
+#4  Database::getRows(np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id, t1.active desc, marker_name, asc, 0, 50, (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1), t1.id, t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name) called at [/home/k/ksmedia/testing/public_html/system/controllers/adminpanel/catalog_controller.php:104]
+#5  Catalog_Controller->loadAction() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:46]
+#6  Load::controller(adminpanel/catalog, loadAction) called at [/home/k/ksmedia/testing/public_html/system/controllers/main_controller.php:25]
+#7  Main_Controller->__construct() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:39]
+#8  Load::controller(main) called at [/home/k/ksmedia/testing/public_html/index.php:93]
+==================================
+==================================
+Date: 04-02-2020 17:58:24
+Message: Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'marker_name' in 'order clause'
+)
+
+==================================
+==================================
+Date: 04-02-2020 17:58:24
+Type: E_USER_ERROR
+Message: Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50
+File: /home/k/ksmedia/testing/public_html/system/models/Database.php
+Line: 134
+------------------
+VARS
+
+$_SERVER = Array
+(
+    [REDIRECT_UNIQUE_ID] => XjmGkAVlnFsAAJyQVVwAAAAA
+    [REDIRECT_MMDB_ADDR] => 93.84.140.203
+    [REDIRECT_GEOIP_ADDR] => 93.84.140.203
+    [REDIRECT_MMDB_INFO] => result found
+    [REDIRECT_GEOIP_CITY] => Minsk
+    [REDIRECT_GEOIP_LONGITUDE] => 27.56670
+    [REDIRECT_GEOIP_CONTINENT_CODE] => EU
+    [REDIRECT_GEOIP_LATITUDE] => 53.90000
+    [REDIRECT_GEOIP_POSTAL_CODE] => 220014
+    [REDIRECT_GEOIP_COUNTRY_CODE] => BY
+    [REDIRECT_GEOIP_COUNTRY_NAME] => Belarus
+    [REDIRECT_GEOIP_REGION] => HM
+    [REDIRECT_PERL_USE_UNSAFE_INC] => 1
+    [REDIRECT_STATUS] => 200
+    [UNIQUE_ID] => XjmGkAVlnFsAAJyQVVwAAAAA
+    [MMDB_ADDR] => 93.84.140.203
+    [GEOIP_ADDR] => 93.84.140.203
+    [MMDB_INFO] => result found
+    [GEOIP_CITY] => Minsk
+    [GEOIP_LONGITUDE] => 27.56670
+    [GEOIP_CONTINENT_CODE] => EU
+    [GEOIP_LATITUDE] => 53.90000
+    [GEOIP_POSTAL_CODE] => 220014
+    [GEOIP_COUNTRY_CODE] => BY
+    [GEOIP_COUNTRY_NAME] => Belarus
+    [GEOIP_REGION] => HM
+    [PERL_USE_UNSAFE_INC] => 1
+    [HTTP_HOST] => 24med.magur.by
+    [HTTP_X_SERVER_ADDR] => 5.101.152.91
+    [HTTP_X_FORWARDED_PROTO] => http
+    [HTTP_X_REAL_IP] => 93.84.140.203
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+    [HTTP_ACCEPT] => application/json, text/javascript, */*; q=0.01
+    [HTTP_ACCEPT_LANGUAGE] => ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_REFERER] => http://24med.magur.by/adminpanel/catalog/
+    [HTTP_COOKIE] => treeview=1000000001000000000; _ym_uid=1575884322650103883; _ym_d=1575884322; _ga=GA1.2.1927859429.1580735335; jv_visits_count_1HlKUKycJ7=1; beget=begetok; PHPSESSID=1daec787d4a093f792d399b20d65c9a1
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.10 (Unix) Server at 24med.magur.by Port 80</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.10 (Unix)
+    [SERVER_NAME] => 24med.magur.by
+    [SERVER_ADDR] => 5.101.152.91
+    [SERVER_PORT] => 80
+    [REQUEST_SCHEME] => http
+    [REMOTE_ADDR] => 93.84.140.203
+    [DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [SERVER_ADMIN] => webmaster@24med.magur.by
+    [SCRIPT_FILENAME] => /home/k/ksmedia/testing/public_html/index.php
+    [REMOTE_PORT] => 35177
+    [REDIRECT_QUERY_STRING] => _search=false&nd=1580828304181&rows=50&page=1&sidx=id_maker&sord=desc
+    [REDIRECT_URL] => /adminpanel/catalog/load
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => _search=false&nd=1580828304181&rows=50&page=1&sidx=id_maker&sord=desc
+    [REQUEST_URI] => /adminpanel/catalog/load?_search=false&nd=1580828304181&rows=50&page=1&sidx=id_maker&sord=desc
+    [SCRIPT_NAME] => /index.php
+    [PATH_INFO] => /adminpanel/catalog/load
+    [PATH_TRANSLATED] => redirect:/index.php/adminpanel/catalog/load/catalog/load
+    [PHP_SELF] => /index.php/adminpanel/catalog/load
+    [REQUEST_TIME_FLOAT] => 1580828304.221
+    [REQUEST_TIME] => 1580828304
+    [argv] => Array
+        (
+            [0] => _search=false&nd=1580828304181&rows=50&page=1&sidx=id_maker&sord=desc
+        )
+
+    [argc] => 1
+)
+
+$_GET = Array
+(
+    [_search] => false
+    [nd] => 1580828304181
+    [rows] => 50
+    [page] => 1
+    [sidx] => id_maker
+    [sord] => desc
+)
+
+$_POST = Array
+(
+)
+
+$_COOKIE = Array
+(
+    [treeview] => 1000000001000000000
+    [_ym_uid] => 1575884322650103883
+    [_ym_d] => 1575884322
+    [_ga] => GA1.2.1927859429.1580735335
+    [jv_visits_count_1HlKUKycJ7] => 1
+    [beget] => begetok
+    [PHPSESSID] => 1daec787d4a093f792d399b20d65c9a1
+)
+
+$_SESSION = Array
+(
+    [currency] => byr
+    [isLoggedIn] => Array
+        (
+            [id] => 38
+            [login] => faber
+            [password] => 7191455cce59a49be930b2e4eb913b8f
+            [email] => 
+            [fio] => Фабер
+            [active] => 1
+            [id_access] => 2
+            [id_courier] => 0
+            [id_kassa] => 
+            [id_kassa_tree] => 0
+            [id_manager] => 0
+        )
+
+    [row_sorted] => prioritet-DESC
+    [vmode] => grid
+    [rand_code] => 7nds
+)
+------------------
+TRACE
+
+#0  Log::getDebugBacktrace() called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:171]
+#1  Log::_getLogErrorMessage(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134) called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:62]
+#2  Log::myErrorHandler(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134, Array ([table] => np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id,[order_name] => t1.active desc, marker_name,[order] => desc,[limit] => 0, 50,[where] => (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1),[group] =>  GROUP BY t1.id,[fields] => t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name,[sql] => SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50,[items] => ))
+#3  trigger_error(Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50, 256) called at [/home/k/ksmedia/testing/public_html/system/models/Database.php:134]
+#4  Database::getRows(np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id, t1.active desc, marker_name, desc, 0, 50, (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1), t1.id, t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name) called at [/home/k/ksmedia/testing/public_html/system/controllers/adminpanel/catalog_controller.php:104]
+#5  Catalog_Controller->loadAction() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:46]
+#6  Load::controller(adminpanel/catalog, loadAction) called at [/home/k/ksmedia/testing/public_html/system/controllers/main_controller.php:25]
+#7  Main_Controller->__construct() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:39]
+#8  Load::controller(main) called at [/home/k/ksmedia/testing/public_html/index.php:93]
+==================================
+==================================
+Date: 04-02-2020 17:58:45
+Message: Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'marker_name' in 'order clause'
+)
+
+==================================
+==================================
+Date: 04-02-2020 17:58:45
+Type: E_USER_ERROR
+Message: Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50
+File: /home/k/ksmedia/testing/public_html/system/models/Database.php
+Line: 134
+------------------
+VARS
+
+$_SERVER = Array
+(
+    [REDIRECT_UNIQUE_ID] => XjmGpQVlnFsAAJzGHmUAAAAv
+    [REDIRECT_MMDB_ADDR] => 93.84.140.203
+    [REDIRECT_GEOIP_ADDR] => 93.84.140.203
+    [REDIRECT_MMDB_INFO] => result found
+    [REDIRECT_GEOIP_CITY] => Minsk
+    [REDIRECT_GEOIP_LONGITUDE] => 27.56670
+    [REDIRECT_GEOIP_CONTINENT_CODE] => EU
+    [REDIRECT_GEOIP_LATITUDE] => 53.90000
+    [REDIRECT_GEOIP_POSTAL_CODE] => 220014
+    [REDIRECT_GEOIP_COUNTRY_CODE] => BY
+    [REDIRECT_GEOIP_COUNTRY_NAME] => Belarus
+    [REDIRECT_GEOIP_REGION] => HM
+    [REDIRECT_PERL_USE_UNSAFE_INC] => 1
+    [REDIRECT_STATUS] => 200
+    [UNIQUE_ID] => XjmGpQVlnFsAAJzGHmUAAAAv
+    [MMDB_ADDR] => 93.84.140.203
+    [GEOIP_ADDR] => 93.84.140.203
+    [MMDB_INFO] => result found
+    [GEOIP_CITY] => Minsk
+    [GEOIP_LONGITUDE] => 27.56670
+    [GEOIP_CONTINENT_CODE] => EU
+    [GEOIP_LATITUDE] => 53.90000
+    [GEOIP_POSTAL_CODE] => 220014
+    [GEOIP_COUNTRY_CODE] => BY
+    [GEOIP_COUNTRY_NAME] => Belarus
+    [GEOIP_REGION] => HM
+    [PERL_USE_UNSAFE_INC] => 1
+    [HTTP_HOST] => 24med.magur.by
+    [HTTP_X_SERVER_ADDR] => 5.101.152.91
+    [HTTP_X_FORWARDED_PROTO] => http
+    [HTTP_X_REAL_IP] => 93.84.140.203
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+    [HTTP_ACCEPT] => application/json, text/javascript, */*; q=0.01
+    [HTTP_ACCEPT_LANGUAGE] => ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_REFERER] => http://24med.magur.by/adminpanel/catalog/
+    [HTTP_COOKIE] => treeview=1000000001000000000; _ym_uid=1575884322650103883; _ym_d=1575884322; _ga=GA1.2.1927859429.1580735335; jv_visits_count_1HlKUKycJ7=1; beget=begetok; PHPSESSID=1daec787d4a093f792d399b20d65c9a1
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.10 (Unix) Server at 24med.magur.by Port 80</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.10 (Unix)
+    [SERVER_NAME] => 24med.magur.by
+    [SERVER_ADDR] => 5.101.152.91
+    [SERVER_PORT] => 80
+    [REQUEST_SCHEME] => http
+    [REMOTE_ADDR] => 93.84.140.203
+    [DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [SERVER_ADMIN] => webmaster@24med.magur.by
+    [SCRIPT_FILENAME] => /home/k/ksmedia/testing/public_html/index.php
+    [REMOTE_PORT] => 39755
+    [REDIRECT_QUERY_STRING] => _search=false&nd=1580828325728&rows=50&page=1&sidx=id_maker&sord=asc
+    [REDIRECT_URL] => /adminpanel/catalog/load
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => _search=false&nd=1580828325728&rows=50&page=1&sidx=id_maker&sord=asc
+    [REQUEST_URI] => /adminpanel/catalog/load?_search=false&nd=1580828325728&rows=50&page=1&sidx=id_maker&sord=asc
+    [SCRIPT_NAME] => /index.php
+    [PATH_INFO] => /adminpanel/catalog/load
+    [PATH_TRANSLATED] => redirect:/index.php/adminpanel/catalog/load/catalog/load
+    [PHP_SELF] => /index.php/adminpanel/catalog/load
+    [REQUEST_TIME_FLOAT] => 1580828325.783
+    [REQUEST_TIME] => 1580828325
+    [argv] => Array
+        (
+            [0] => _search=false&nd=1580828325728&rows=50&page=1&sidx=id_maker&sord=asc
+        )
+
+    [argc] => 1
+)
+
+$_GET = Array
+(
+    [_search] => false
+    [nd] => 1580828325728
+    [rows] => 50
+    [page] => 1
+    [sidx] => id_maker
+    [sord] => asc
+)
+
+$_POST = Array
+(
+)
+
+$_COOKIE = Array
+(
+    [treeview] => 1000000001000000000
+    [_ym_uid] => 1575884322650103883
+    [_ym_d] => 1575884322
+    [_ga] => GA1.2.1927859429.1580735335
+    [jv_visits_count_1HlKUKycJ7] => 1
+    [beget] => begetok
+    [PHPSESSID] => 1daec787d4a093f792d399b20d65c9a1
+)
+
+$_SESSION = Array
+(
+    [currency] => byr
+    [isLoggedIn] => Array
+        (
+            [id] => 38
+            [login] => faber
+            [password] => 7191455cce59a49be930b2e4eb913b8f
+            [email] => 
+            [fio] => Фабер
+            [active] => 1
+            [id_access] => 2
+            [id_courier] => 0
+            [id_kassa] => 
+            [id_kassa_tree] => 0
+            [id_manager] => 0
+        )
+
+    [row_sorted] => prioritet-DESC
+    [vmode] => grid
+    [rand_code] => 7nds
+)
+------------------
+TRACE
+
+#0  Log::getDebugBacktrace() called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:171]
+#1  Log::_getLogErrorMessage(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134) called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:62]
+#2  Log::myErrorHandler(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134, Array ([table] => np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id,[order_name] => t1.active desc, marker_name,[order] => asc,[limit] => 0, 50,[where] => (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1),[group] =>  GROUP BY t1.id,[fields] => t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name,[sql] => SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50,[items] => ))
+#3  trigger_error(Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name asc LIMIT 0, 50, 256) called at [/home/k/ksmedia/testing/public_html/system/models/Database.php:134]
+#4  Database::getRows(np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id, t1.active desc, marker_name, asc, 0, 50, (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1), t1.id, t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name) called at [/home/k/ksmedia/testing/public_html/system/controllers/adminpanel/catalog_controller.php:104]
+#5  Catalog_Controller->loadAction() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:46]
+#6  Load::controller(adminpanel/catalog, loadAction) called at [/home/k/ksmedia/testing/public_html/system/controllers/main_controller.php:25]
+#7  Main_Controller->__construct() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:39]
+#8  Load::controller(main) called at [/home/k/ksmedia/testing/public_html/index.php:93]
+==================================
+==================================
+Date: 04-02-2020 17:58:48
+Message: Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'marker_name' in 'order clause'
+)
+
+==================================
+==================================
+Date: 04-02-2020 17:58:48
+Type: E_USER_ERROR
+Message: Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50
+File: /home/k/ksmedia/testing/public_html/system/models/Database.php
+Line: 134
+------------------
+VARS
+
+$_SERVER = Array
+(
+    [REDIRECT_UNIQUE_ID] => XjmGqAVlnFsAAJyurVcAAAAQ
+    [REDIRECT_MMDB_ADDR] => 93.84.140.203
+    [REDIRECT_GEOIP_ADDR] => 93.84.140.203
+    [REDIRECT_MMDB_INFO] => result found
+    [REDIRECT_GEOIP_CITY] => Minsk
+    [REDIRECT_GEOIP_LONGITUDE] => 27.56670
+    [REDIRECT_GEOIP_CONTINENT_CODE] => EU
+    [REDIRECT_GEOIP_LATITUDE] => 53.90000
+    [REDIRECT_GEOIP_POSTAL_CODE] => 220014
+    [REDIRECT_GEOIP_COUNTRY_CODE] => BY
+    [REDIRECT_GEOIP_COUNTRY_NAME] => Belarus
+    [REDIRECT_GEOIP_REGION] => HM
+    [REDIRECT_PERL_USE_UNSAFE_INC] => 1
+    [REDIRECT_STATUS] => 200
+    [UNIQUE_ID] => XjmGqAVlnFsAAJyurVcAAAAQ
+    [MMDB_ADDR] => 93.84.140.203
+    [GEOIP_ADDR] => 93.84.140.203
+    [MMDB_INFO] => result found
+    [GEOIP_CITY] => Minsk
+    [GEOIP_LONGITUDE] => 27.56670
+    [GEOIP_CONTINENT_CODE] => EU
+    [GEOIP_LATITUDE] => 53.90000
+    [GEOIP_POSTAL_CODE] => 220014
+    [GEOIP_COUNTRY_CODE] => BY
+    [GEOIP_COUNTRY_NAME] => Belarus
+    [GEOIP_REGION] => HM
+    [PERL_USE_UNSAFE_INC] => 1
+    [HTTP_HOST] => 24med.magur.by
+    [HTTP_X_SERVER_ADDR] => 5.101.152.91
+    [HTTP_X_FORWARDED_PROTO] => http
+    [HTTP_X_REAL_IP] => 93.84.140.203
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+    [HTTP_ACCEPT] => application/json, text/javascript, */*; q=0.01
+    [HTTP_ACCEPT_LANGUAGE] => ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_REFERER] => http://24med.magur.by/adminpanel/catalog/
+    [HTTP_COOKIE] => treeview=1000000001000000000; _ym_uid=1575884322650103883; _ym_d=1575884322; _ga=GA1.2.1927859429.1580735335; jv_visits_count_1HlKUKycJ7=1; beget=begetok; PHPSESSID=1daec787d4a093f792d399b20d65c9a1
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.10 (Unix) Server at 24med.magur.by Port 80</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.10 (Unix)
+    [SERVER_NAME] => 24med.magur.by
+    [SERVER_ADDR] => 5.101.152.91
+    [SERVER_PORT] => 80
+    [REQUEST_SCHEME] => http
+    [REMOTE_ADDR] => 93.84.140.203
+    [DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /home/k/ksmedia/testing/public_html
+    [SERVER_ADMIN] => webmaster@24med.magur.by
+    [SCRIPT_FILENAME] => /home/k/ksmedia/testing/public_html/index.php
+    [REMOTE_PORT] => 40209
+    [REDIRECT_QUERY_STRING] => _search=false&nd=1580828328294&rows=50&page=1&sidx=id_maker&sord=desc
+    [REDIRECT_URL] => /adminpanel/catalog/load
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => _search=false&nd=1580828328294&rows=50&page=1&sidx=id_maker&sord=desc
+    [REQUEST_URI] => /adminpanel/catalog/load?_search=false&nd=1580828328294&rows=50&page=1&sidx=id_maker&sord=desc
+    [SCRIPT_NAME] => /index.php
+    [PATH_INFO] => /adminpanel/catalog/load
+    [PATH_TRANSLATED] => redirect:/index.php/adminpanel/catalog/load/catalog/load
+    [PHP_SELF] => /index.php/adminpanel/catalog/load
+    [REQUEST_TIME_FLOAT] => 1580828328.36
+    [REQUEST_TIME] => 1580828328
+    [argv] => Array
+        (
+            [0] => _search=false&nd=1580828328294&rows=50&page=1&sidx=id_maker&sord=desc
+        )
+
+    [argc] => 1
+)
+
+$_GET = Array
+(
+    [_search] => false
+    [nd] => 1580828328294
+    [rows] => 50
+    [page] => 1
+    [sidx] => id_maker
+    [sord] => desc
+)
+
+$_POST = Array
+(
+)
+
+$_COOKIE = Array
+(
+    [treeview] => 1000000001000000000
+    [_ym_uid] => 1575884322650103883
+    [_ym_d] => 1575884322
+    [_ga] => GA1.2.1927859429.1580735335
+    [jv_visits_count_1HlKUKycJ7] => 1
+    [beget] => begetok
+    [PHPSESSID] => 1daec787d4a093f792d399b20d65c9a1
+)
+
+$_SESSION = Array
+(
+    [currency] => byr
+    [isLoggedIn] => Array
+        (
+            [id] => 38
+            [login] => faber
+            [password] => 7191455cce59a49be930b2e4eb913b8f
+            [email] => 
+            [fio] => Фабер
+            [active] => 1
+            [id_access] => 2
+            [id_courier] => 0
+            [id_kassa] => 
+            [id_kassa_tree] => 0
+            [id_manager] => 0
+        )
+
+    [row_sorted] => prioritet-DESC
+    [vmode] => grid
+    [rand_code] => 7nds
+)
+------------------
+TRACE
+
+#0  Log::getDebugBacktrace() called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:171]
+#1  Log::_getLogErrorMessage(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134) called at [/home/k/ksmedia/testing/public_html/system/components/Log.php:62]
+#2  Log::myErrorHandler(256, Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50, /home/k/ksmedia/testing/public_html/system/models/Database.php, 134, Array ([table] => np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id,[order_name] => t1.active desc, marker_name,[order] => desc,[limit] => 0, 50,[where] => (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1),[group] =>  GROUP BY t1.id,[fields] => t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name,[sql] => SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50,[items] => ))
+#3  trigger_error(Ошибка  !SELECT t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name FROM np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id WHERE (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1)  GROUP BY t1.id ORDER BY t1.active desc, marker_name desc LIMIT 0, 50, 256) called at [/home/k/ksmedia/testing/public_html/system/models/Database.php:134]
+#4  Database::getRows(np_catalog as t1 JOIN np_catalog_categories as t2 ON t1.id = t2.id_catalog JOIN np_maker as t3 ON t1.id_maker = t3.id JOIN np_catalog_tree_prefix as t4 ON t1.id_prefix = t4.id, t1.active desc, marker_name, desc, 0, 50, (`id_razdel0` = 1 or
+		  `id_razdel1` = 1 or
+		  `id_razdel2` = 1 or
+		  `id_razdel3` = 1 or
+		  `id_razdel4` = 1 or
+		  `id_razdel5` = 1), t1.id, t1.*, t3.name as maker_name, CONCAT(t4.name, ' ', t3.name, ' ', t1.name) as product_name) called at [/home/k/ksmedia/testing/public_html/system/controllers/adminpanel/catalog_controller.php:104]
+#5  Catalog_Controller->loadAction() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:46]
+#6  Load::controller(adminpanel/catalog, loadAction) called at [/home/k/ksmedia/testing/public_html/system/controllers/main_controller.php:25]
+#7  Main_Controller->__construct() called at [/home/k/ksmedia/testing/public_html/system/components/Load.php:39]
+#8  Load::controller(main) called at [/home/k/ksmedia/testing/public_html/index.php:93]
+==================================
