@@ -1,0 +1,90 @@
+#admin_menu, #admin_menu ul {padding:0;	margin:0; list-style: none;	}
+	
+#admin_menu {	
+	margin:0; 
+	padding:0 0 0 100px; 
+	z-index: 91;
+	border: 1px solid #99bce8;
+	background-image: none;
+	background-color: #d3e1f1;
+	background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#dfe9f5),color-stop(100%,#d3e1f1));
+	background-image: -webkit-linear-gradient(top,#dfe9f5,#d3e1f1);
+	background-image: -moz-linear-gradient(top,#dfe9f5,#d3e1f1);
+	background-image: -o-linear-gradient(top,#dfe9f5,#d3e1f1);
+	background-image: -ms-linear-gradient(top,#dfe9f5,#d3e1f1);
+	background-image: linear-gradient(top,#dfe9f5,#d3e1f1);
+}
+
+	#admin_menu:before,
+	#admin_menu:after {	content: "";	display: table;	}
+	
+	#admin_menu:after {clear: both;}
+	#admin_menu {zoom:1;}
+	#admin_menu li {	float: left;	position: relative;	}
+	
+	#admin_menu a {
+		height: 32px; 
+		padding: 0 10px;
+		display: table-cell; 
+		vertical-align: middle; 
+		text-decoration:none; 
+		text-align: center; 
+		font-size: 11px; 
+		font-family: Trebuchet MS;
+		color: #333;
+	}
+	
+	#admin_menu a:hover{
+		background-color: #d3e1f1;
+		border-radius: 5px;
+	}
+	
+	#admin_menu ul {
+		position: absolute;
+		top: 32px;
+		z-index: 102;
+		visibility: hidden; 
+		border: 1px solid #136d95; 		
+	}
+
+
+	#admin_menu li:hover > ul {
+		opacity: 1;
+		visibility: visible;
+		margin: 0;
+	}
+	
+	#admin_menu ul li {
+		float: none;
+		display: block;
+		_line-height: 0; /*Только для IE6*/
+		text-align: center;
+	}
+	
+	#admin_menu ul a {    
+		/*padding: 2px 9px;*/
+		display: table-cell; 
+		vertical-align: middle;
+		float: none;
+	}
+
+	#admin_menu ul a:hover {
+		background-color: #d3e1f1;	
+	}
+	
+	
+	#admin_menu ul li a{
+		text-transform: none;
+		font: 11px "Tahoma";
+		text-align: left;
+		padding-left: 30px;
+		width: 170px;
+		height: 30px;
+		border-radius: 5px;		
+	}
+	
+	#admin_menu ul li{
+		background-color: #ececec;
+		width: 210px;
+		padding: 0 3px;
+	}

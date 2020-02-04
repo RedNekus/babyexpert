@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /cabinet/
+Disallow: /cart/
+Disallow: /search/
+Disallow: /registration/
+
+User-agent: Yandex
+Disallow: /cabinet/
+Disallow: /cart/
+Disallow: /search/
+Disallow: /registration/
+Sitemap: http://babyexpert.by/sitemap.xml
+host: babyexpert.by

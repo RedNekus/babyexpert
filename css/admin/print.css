@@ -1,0 +1,90 @@
+.print {
+	font: Italic 11.5px Arial;
+}
+
+.print b {
+	font-weight: Bold;
+} 
+
+.header {
+	font-size: 16px;
+	font-style: normal;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.w70 {
+	width: 73%;
+}
+
+.shapka {
+	font-size: 13px;
+}
+
+.bottom-text {
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 18px;
+	font-style: normal;
+}
+
+.otstup-0 {
+	width: 2%;
+	display: inline-block;
+	vertical-align: top;	
+	text-align: left;
+}
+
+.otstup-1 {
+	width: 4%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+}
+
+.otstup-2 {
+	width: 5%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;	
+}
+
+.otstup-25 {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;	
+}
+
+.inline-block {
+	display: inline-block;
+	vertical-align: top;
+	width: 94%;
+}
+
+.inline-block.w0 {
+	width: 97%;
+}
+
+.inline-block.w1 {
+	width: 95%;
+}
+
+.border-bot {
+	border-bottom: 2px dashed #000;
+	padding-bottom: 10px;
+}
+
+.pad-t {
+	padding-top: 10px;
+}
+
+.pad-t b {
+	font-family: "Times New Roman";
+}

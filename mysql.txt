@@ -1,0 +1,125 @@
+ALTER TABLE `np_adminaccess` CHANGE `stats_review` `adminusers_stats_review` INT(1) NOT NULL;
+ALTER TABLE `np_adminaccess`  ADD `zakaz_tovar_add` INT(1) NOT NULL  AFTER `sklad_review`,  ADD `zakaz_tovar_edit` INT(1) NOT NULL  AFTER `zakaz_tovar_add`,  ADD `zakaz_tovar_del` INT(1) NOT NULL  AFTER `zakaz_tovar_edit`,  ADD `zakaz_tovar_review` INT(1) NOT NULL  AFTER `zakaz_tovar_del`,  ADD `kontragenty_add` INT(1) NOT NULL  AFTER `zakaz_tovar_review`,  ADD `kontragenty_edit` INT(1) NOT NULL  AFTER `kontragenty_add`,  ADD `kontragenty_del` INT(1) NOT NULL  AFTER `kontragenty_edit`,  ADD `kontragenty_review` INT(1) NOT NULL  AFTER `kontragenty_del`,  ADD `kontragenty_tip_add` INT(1) NOT NULL  AFTER `kontragenty_review`,  ADD `kontragenty_tip_edit` INT(1) NOT NULL  AFTER `kontragenty_tip_add`,  ADD `kontragenty_tip_del` INT(1) NOT NULL  AFTER `kontragenty_tip_edit`,  ADD `kontragenty_tip_review` INT(1) NOT NULL  AFTER `kontragenty_tip_del`,  ADD `application_for_warehouse_add` INT(1) NOT NULL  AFTER `kontragenty_tip_review`,  ADD `application_for_warehouse_edit` INT(1) NOT NULL  AFTER `application_for_warehouse_add`,  ADD `application_for_warehouse_del` INT(1) NOT NULL  AFTER `application_for_warehouse_edit`,  ADD `application_for_warehouse_review` INT(1) NOT NULL  AFTER `application_for_warehouse_del`,  ADD `catalog_sklad_add` INT(1) NOT NULL  AFTER `application_for_warehouse_review`,  ADD `catalog_sklad_edit` INT(1) NOT NULL  AFTER `catalog_sklad_add`,  ADD `catalog_sklad_del` INT(1) NOT NULL  AFTER `catalog_sklad_edit`,  ADD `catalog_sklad_review` INT(1) NOT NULL  AFTER `catalog_sklad_del`,  ADD `kassa_add` INT(1) NOT NULL  AFTER `catalog_sklad_review`;
+ALTER TABLE `np_adminaccess` DROP `suppliers_add`, DROP `suppliers_edit`, DROP `suppliers_del`, DROP `suppliers_review`, DROP `storekeepers_add`, DROP `storekeepers_edit`, DROP `storekeepers_del`, DROP `storekeepers_review`, DROP `carriers_add`, DROP `carriers_edit`, DROP `carriers_del`, DROP `carriers_review`;
+
+ALTER TABLE `np_adminaccess`  
+	ADD `kassa_edit` INT(1) NOT NULL  AFTER `sklad_review`,  
+	ADD `kassa_del` INT(1) NOT NULL  AFTER `kassa_edit`,  
+	ADD `kassa_review` INT(1) NOT NULL  AFTER `kassa_del`,
+	ADD `tip_operation_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `tip_operation_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `tip_operation_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `tip_operation_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `kassa_tree_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `kassa_tree_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `kassa_tree_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `competitors_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `competitors_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `competitors_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `competitors_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `price_monitoring_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `price_monitoring_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `price_monitoring_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `price_monitoring_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `fuel_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `fuel_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `fuel_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `fuel_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `product_week_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `product_week_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `product_week_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `product_week_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `importer_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `importer_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `importer_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `importer_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `manufacturer_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `manufacturer_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `manufacturer_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `manufacturer_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `brand_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `brand_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `brand_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `brand_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `banners_left_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `banners_left_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `banners_left_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `banners_left_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `banners_small_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `banners_small_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `banners_small_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `banners_small_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `spros_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `spros_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `spros_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `spros_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `zpmanager_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `zpmanager_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `zpmanager_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `zpmanager_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `managers_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `managers_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `managers_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `managers_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `catalog_complect_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `catalog_complect_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `catalog_complect_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `catalog_complect_review` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `return_tmc_add` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `return_tmc_edit` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `return_tmc_del` INT(1) NOT NULL  AFTER `kassa_review`,
+	ADD `return_tmc_review` INT(1) NOT NULL  AFTER `kassa_review`;
+	
+ALTER TABLE `np_akcii_language` CHANGE `id_lng` `id` INT(11) NOT NULL AUTO_INCREMENT;
+DROP TABLE `np_carriers`, `np_couriers_tree`, `np_storekeepers`, `np_suppliers`;
+
+ALTER TABLE `np_catalog_tree` ADD `show_opt` INT(1) NOT NULL AFTER `show_banner`;
+ALTER TABLE `np_catalog_tree` ADD `image` VARCHAR(255) NOT NULL AFTER `path`;
+ALTER TABLE `np_connection` ADD `id_maker` INT NOT NULL AFTER `id_tree`;
+ALTER TABLE `np_couriers` ADD `zp_blr` DECIMAL(10,2) NOT NULL AFTER `zp`;
+ALTER TABLE `np_couriers` ADD `total_blr` DECIMAL(10,2) NOT NULL AFTER `total`;
+ALTER TABLE `np_couriers` ADD `kurs` INT NOT NULL AFTER `total_blr`;
+ALTER TABLE `np_couriers` ADD `obrabotan` INT(1) NOT NULL AFTER `adopted`, ADD `oplatil` INT(1) NOT NULL AFTER `obrabotan`;
+ALTER TABLE `np_maker` ADD `prioritet` INT NOT NULL AFTER `id_manufacturer`;
+ALTER TABLE `np_registration` ADD `diler` INT NOT NULL AFTER `manager`;
+ALTER TABLE `np_registration` CHANGE `firstname` `name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+ALTER TABLE `np_registration` ADD `id_kassa_tree` INT NOT NULL AFTER `active`;
+ALTER TABLE `np_zakaz` ADD `otkaz` INT(1) NOT NULL AFTER `nosell`, ADD `id_complect` INT NOT NULL AFTER `otkaz`;
+ALTER TABLE `np_zakaz_client` ADD `id_diler` INT NOT NULL AFTER `id_couriers`;
+
+ALTER TABLE `np_zakaz_client` DROP `skidka_cena`, DROP `skidka_procent`, DROP `doplata`, DROP `cena_dostavka`, DROP `rezerv`, DROP `date_rezerv`, DROP `predzakaz`, DROP `postavshik`, DROP `date_predzakaz`;
+ALTER TABLE `np_zakaz_client` ADD `doplata_usd` INT NOT NULL AFTER `call`, ADD `doplata_blr` DECIMAL(10,2) NOT NULL AFTER `doplata_usd`, ADD `beznal` INT(1) NOT NULL AFTER `doplata_blr`, ADD `cena_rozn_usd` DECIMAL(10,2) NOT NULL AFTER `beznal`;
+
+ALTER TABLE `np_catalog` ADD `pw_cena` INT NOT NULL AFTER `cena_blr_old`, ADD `pw_cena_blr` INT NOT NULL AFTER `pw_cena`;
+ALTER TABLE `np_catalog` ADD `popular` INT(1) NOT NULL AFTER `new`;
+ALTER TABLE `np_catalog` ADD `dop_text` VARCHAR(255) NOT NULL AFTER `instructions`;
+ALTER TABLE `np_catalog` ADD `komplect` TEXT NOT NULL AFTER `podarok`;
+ALTER TABLE `np_catalog` ADD `serv_centr` VARCHAR(120) NOT NULL AFTER `importer`;
+
+ALTER TABLE `np_catalog` ADD `vid_complect` INT NOT NULL AFTER `srok_country`, ADD `cena_rozn_usd` INT NOT NULL AFTER `vid_complect`, ADD `cena_rozn_blr` DECIMAL(10,2) NOT NULL AFTER `cena_rozn_usd`, ADD `cena_rozn1_usd` INT NOT NULL AFTER `cena_rozn_blr`, ADD `cena_rozn1_blr` DECIMAL(10,2) NOT NULL AFTER `cena_rozn1_usd`, ADD `cena_diler1_usd` INT NOT NULL AFTER `cena_rozn1_blr`, ADD `cena_diler1_blr` DECIMAL(10,2) NOT NULL AFTER `cena_diler1_usd`, ADD `cena_diler2_usd` INT NOT NULL AFTER `cena_diler1_blr`, ADD `cena_diler2_blr` DECIMAL(10,2) NOT NULL AFTER `cena_diler2_usd`, ADD `cena_diler3_usd` INT NOT NULL AFTER `cena_diler2_blr`, ADD `cena_diler3_blr` DECIMAL(10,2) NOT NULL AFTER `cena_diler3_usd`, ADD `show_opt` INT NOT NULL AFTER `cena_diler3_blr`, ADD `kolvo` INT NOT NULL AFTER `show_opt`;
+
+
+TRUNCATE TABLE `np_catalog_complect`;
+ALTER TABLE `np_catalog_complect` DROP `id`;
+ALTER TABLE `np_catalog_complect` ADD `id` INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`);
+
+
+ALTER TABLE  `np_catalog` CHANGE  `pw_cena_blr`  `pw_cena_blr` DECIMAL( 10, 2 ) NOT NULL;
+ALTER TABLE  `np_catalog_complect` CHANGE  `skidka_blr`  `skidka_blr` DECIMAL( 10, 2 ) NOT NULL;
+ALTER TABLE  `np_catalog_complect` CHANGE  `doplata_blr`  `doplata_blr` DECIMAL( 10, 2 ) NOT NULL;
+ALTER TABLE  `np_catalog_razmer` CHANGE  `cena_blr`  `cena_blr` DECIMAL( 10, 2 ) NOT NULL;
+ALTER TABLE  `np_couriers` CHANGE  `kurs`  `kurs` DECIMAL( 10, 2 ) NOT NULL;
+
+ALTER TABLE  `np_delivery_tmc` CHANGE  `sum_carriers`  `sum_carriers` DECIMAL( 10, 2 ) NOT NULL;
+ALTER TABLE  `np_fuel` CHANGE  `cena`  `cena` DECIMAL( 10, 2 ) NOT NULL;
+ALTER TABLE  `np_kassa` CHANGE  `cena_blr`  `cena_blr` DECIMAL( 10, 2 ) NOT NULL;
+ALTER TABLE  `np_kassa` CHANGE  `kurs`  `kurs` DECIMAL( 10, 2 ) NOT NULL;
+ALTER TABLE  `np_log_currency_tree` CHANGE  `kurs`  `kurs` DECIMAL( 10, 2 ) NOT NULL;
+ALTER TABLE  `np_price_competitors` CHANGE  `cena_blr`  `cena_blr` DECIMAL( 10, 2 ) NOT NULL;
+ALTER TABLE  `np_sklad_tovar` CHANGE  `cena`  `cena` DECIMAL( 10, 2 ) NOT NULL;
+ALTER TABLE  `np_sklad_tovar` CHANGE  `cena_sell`  `cena_sell` DECIMAL( 10, 2 ) NOT NULL;
+ALTER TABLE  `np_zpmanager` CHANGE  `cena_ot`  `cena_ot` DECIMAL( 10, 2 ) NOT NULL ,
+CHANGE  `cena_do`  `cena_do` DECIMAL( 10, 2 ) NOT NULL ,
+CHANGE  `r_delta`  `r_delta` DECIMAL( 10, 2 ) NOT NULL ,
+CHANGE  `zp`  `zp` DECIMAL( 10, 2 ) NOT NULL ,
+CHANGE  `zp_procent`  `zp_procent` DECIMAL( 10, 2 ) NOT NULL;

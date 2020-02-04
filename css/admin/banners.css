@@ -1,0 +1,13 @@
+table{width: 870px;}
+.table-tabs-banners input{width: 100%; height: 22px; padding: 1px 3px; line-height: 18px; border: 1px solid #b5b8c8; background: #fff url('/img/admin/icons/text-bg.gif') repeat-x 0 0; }
+.table-tabs-banners select{width: 60%; height: 24px; padding: 4px 3px; line-height: 18px; border: 1px solid #b5b8c8; background: #fff url('/img/admin/icons/text-bg.gif') repeat-x 0 0; }
+.table-tabs-banners textarea{width: 100%; height: 136px;  padding: 1px 3px; line-height: normal; border: 1px solid #b5b8c8; background: #fff url('/img/admin/icons/text-bg.gif') repeat-x 0 0; resize: none;}
+.table-tabs-banners label{margin-bottom: 10px; font-size: 12px;}
+.td-name-width{width: 150px;}
+.td-name-align{ vertical-align: top; padding-top: 5px;}
+.table-tabs-banners input[type="checkbox"]{text-align: left; width: 20px; margin-left: -3px;}
+
+#val_short_description{ width: 860px !important; height: 383px !important;}
+#loading{position: absolute; margin: 80px 0 0 180px; display:none;}
+#banners_insert img{width: 710px; margin-top: 15px;}
+.ui-dialog .ui-dialog-title {font-size: 12px;}

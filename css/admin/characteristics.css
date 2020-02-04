@@ -1,0 +1,21 @@
+#gbox_TableCharacter{margin-top: 10px;}
+.td-name-width{width: 150px;}
+.td-name-align{ vertical-align: top; padding-top: 5px;}
+.ui-dialog .ui-dialog-title {font-size: 12px;}
+td.subgrid-data div.tablediv table {  width: 100%; }
+
+.ui-jqgrid .ui-jqgrid-hdiv {border: 0 !important; }
+.ui-jqgrid .ui-subgrid td.subgrid-data {border-bottom: none !important;border-right: none !important;}
+.tablediv .ui-jqgrid-labels{display: none;}
+
+.toolbar_top {display: inline-block; vertical-align: top; padding-top: 3px; margin-right: 20px;min-width: 1000px;}
+.toolbar_top label { padding: 0 10px;}
+.toolbar_top .btn-cur { padding: 2px 5px; border-radius: 2px; margin: 0 10px; border: 1px solid #74B2E2;}
+.toolbar_top .btn-cur.active,.toolbar_top .btn-cur.select,.toolbar_top .btn-cur:hover {background-color: #74B2E2; border: 1px solid #74B2E2; color: #fff;}
+.toolbar_top select {width: 150px; margin: 1px 0 0 2px;}
+.toolbar_top .toolbar-block {padding: 0px 0px 12px; min-width: 1000px; }
+.toolbar_top #summa {display: inline-block; margin: 1px 0 0 2px;}
+.ui-tabs .ui-tabs-hide {
+    position: absolute;
+    left:-10000px;
+ }

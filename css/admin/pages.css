@@ -1,0 +1,22 @@
+table{width: 100%;}
+#gbox_le_table{height: 100%}
+.table-tabs-item input{width: 100%; height: 22px; padding: 1px 3px; line-height: 18px; border: 1px solid #b5b8c8; background: #fff url('/img/admin/icons/text-bg.gif') repeat-x 0 0; }
+.table-tabs-item select{width: 60%; height: 24px; padding: 4px 3px; line-height: 18px; border: 1px solid #b5b8c8; background: #fff url('/img/admin/icons/text-bg.gif') repeat-x 0 0; }
+.table-tabs-item textarea{width: 100%; height: 136px;  padding: 1px 3px; line-height: normal; border: 1px solid #b5b8c8; background: #fff url('/img/admin/icons/text-bg.gif') repeat-x 0 0; resize: none;}
+.table-tabs-item label{margin-bottom: 10px; font-size: 12px;}
+.td-name-width{width: 150px;}
+.td-access-width{}
+.td-access-width label{padding-right: 30px;}
+.td-name-align{ vertical-align: top; padding-top: 5px;}
+.table-tabs-item input[type="checkbox"]{text-align: left; width: 20px; margin-left: -3px;}
+
+#val_short_description_ifr{ width: 860px !important; height: 383px !important;}
+
+.ui-dialog .ui-dialog-title {font-size: 12px;}
+
+
+#t_le_table .toolbar_top{display: inline-block; vertical-align: top; padding-top: 1px; margin-right: 20px;}
+#t_le_table .toolbar_top label{ padding: 0 10px;}
+#t_le_table .toolbar_top .btn-cur{ padding: 2px 5px; border-radius: 2px; margin: 0 10px; border: 1px solid #74B2E2;}
+#t_le_table .toolbar_top #select-currency{width: 150px;}
+#gs_id_maker, #gs_name{width: 150px; margin-top: 1px;}

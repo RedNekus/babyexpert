@@ -1,0 +1,25 @@
+.table-tabs-reviews{width: 870px; padding: 10px;}
+.table-tabs-reviews input{width: 100%; height: 22px; padding: 1px 0px; line-height: 18px; border: none; background-color: transparent; }
+.table-tabs-reviews input[type="checkbox"]{text-align: left; width: 20px; margin-left: -3px;}
+.table-tabs-reviews input[type="radio"]{text-align: left; width: 20px; margin-left: -3px;}
+.table-tabs-reviews select{width: 60%; height: 24px; padding: 4px 3px; line-height: 18px; border: 1px solid #b5b8c8; background: #fff url('/img/admin/icons/text-bg.gif') repeat-x 0 0; }
+.table-tabs-reviews textarea{width: 100%; height: 265px;  padding: 1px 3px; line-height: normal; border: 1px solid #b5b8c8; background: #fff url('/img/admin/icons/text-bg.gif') repeat-x 0 0; resize: none;}
+.table-tabs-reviews label{margin-bottom: 10px; font-size: 12px;}
+.table-tabs-reviews .fancy_nav_left{background: url('/img/admin/fancy_nav_left.png'); text-align: center;width: 50px; height: 10px;}
+.table-tabs-reviews .td-name-width{width: 100px;}
+.table-tabs-reviews .td-name-align{ vertical-align: top; padding-top: 5px;}
+.table-tabs-reviews .rank_style label{font-size: 14px;   left: -5px;  margin-right: 10px;   position: relative;   top: -6px;}
+
+.ui-dialog .ui-dialog-title {font-size: 12px;}
+
+.table-tabs-question{width: 870px; padding: 10px;}
+.table-tabs-question input{width: 100%; height: 22px; padding: 1px 0px; line-height: 18px; border: none; background-color: transparent; }
+.table-tabs-question input[type="checkbox"]{text-align: left; width: 20px; margin-left: -3px;}
+.table-tabs-question input[type="radio"]{text-align: left; width: 20px; margin-left: -3px;}
+.table-tabs-question select{width: 60%; height: 24px; padding: 4px 3px; line-height: 18px; border: 1px solid #b5b8c8; background: #fff url('/img/admin/icons/text-bg.gif') repeat-x 0 0; }
+.table-tabs-question textarea{width: 100%; height: 120px;  padding: 1px 3px; line-height: normal; border: 1px solid #b5b8c8; background: #fff url('/img/admin/icons/text-bg.gif') repeat-x 0 0; resize: none;}
+.table-tabs-question label{margin-bottom: 10px; font-size: 12px;}
+.table-tabs-question .fancy_nav_left{background: url('/img/admin/fancy_nav_left.png'); text-align: center;width: 50px; height: 10px;}
+.table-tabs-question .td-name-width{width: 205px;}
+.table-tabs-question .td-name-align{ vertical-align: top; padding-top: 5px;}
+.table-tabs-question .rank_style label{font-size: 14px;   left: -5px;  margin-right: 10px;   position: relative;   top: -6px;}
