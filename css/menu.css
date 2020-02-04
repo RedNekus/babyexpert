@@ -1,0 +1,408 @@
+
+#header .nav-search {
+    display: inline-block;
+    margin: 7px 0 0 6px;
+    vertical-align: top;
+}
+#header .nav {
+    height: 29px;
+    margin: 0 0 11px -24px;
+}
+#header .nav li {
+    float: left;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+#header .nav a {
+    background: url("/img/h-nav.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 29px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: -9999px;
+}
+#header .nav li:first-child a {
+    width: 122px;
+}
+#header .nav li + li a {
+    background-position: -122px 0;
+    width: 111px;
+}
+#header .nav li + li + li a {
+    background-position: -233px 0;
+    width: 124px;
+}
+#header .nav li + li + li + li a {
+    background-position: -357px 0;
+    width: 119px;
+}
+#header .nav li + li + li + li + li a {
+    background-position: 100% 0;
+    width: 131px;
+}
+#header .nav li:first-child a:hover {
+    background-position: 0 -29px;
+}
+#header .nav li + li a:hover {
+    background-position: -122px -29px;
+}
+#header .nav li + li + li a:hover {
+    background-position: -233px -29px;
+}
+#header .nav li + li + li + li a:hover {
+    background-position: -357px -29px;
+}
+#header .nav li + li + li + li + li a:hover {
+    background-position: 100% -29px;
+}
+#header .nav li.active:first-child a {
+    background-position: 0 -58px;
+}
+#header .nav li + li.active a {
+    background-position: -122px -58px;
+}
+#header .nav li + li + li.active a {
+    background-position: -233px -58px;
+}
+#header .nav li + li + li + li.active a {
+    background-position: -357px -58px;
+}
+#header .nav li + li + li + li + li.active a {
+    background-position: 100% -58px;
+}
+#header .search {
+    background: url("/img/sb-bg.png") repeat-x scroll 0 0 #006994;
+    border-radius: 4px 4px 4px 4px;
+    height: 89px;
+    line-height: 1;
+    position: relative;
+    width: 583px;
+}
+#header .search a, #header .search span, #header .search label {
+    color: #FFFFFF;
+    font: 12px "Trebuchet MS";
+    vertical-align: middle;
+}
+#header .search span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+#header .search span:hover {
+    text-decoration: none;
+}
+#header .search input[type="text"], #header .search input[type="password"] {
+    background: none repeat scroll 0 center transparent;
+    border: 0 none;
+    color: #979797;
+    font-size: 16px;
+    height: 20px;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    width: 100%;
+}
+#header .search input[type="radio"], #header .search input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+#header .search .btn-search {
+    border: 0 none;
+    cursor: pointer;
+    height: 36px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    text-indent: -9999px;
+    width: 99px;
+    background: url("/img/btn-search.png") no-repeat scroll 0 0 transparent;
+    left: 468px;
+    top: 25px;	
+}
+#header .search .btn-search:hover {
+    background-position: 0 -36px;
+}
+#header .search .field {
+    background: url("/img/search.png") repeat-x scroll 0 0 transparent;
+    height: 24px;
+    padding: 4px 12px 0;
+    position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+#header .search .field .cl, #header .search .field .cr {
+    background: url("/img/search.png") no-repeat scroll 0 0 transparent;
+    height: 28px;
+    position: absolute;
+    top: 0;
+    width: 6px;
+}
+#header .search .field .cl {
+    background-position: 0 -28px;
+    left: 0;
+}
+#header .search .field .cr {
+    background-position: 0 -56px;
+    right: 0;
+}
+#search-form {
+    padding: 28px 0 0 20px;
+}
+#search-form ul {
+    margin: 6px 0 0 3px;
+}
+#search-form li {
+    display: inline-block;
+    vertical-align: top;
+    width: 226px;
+}
+#search-form li + li {
+    margin-right: 19px;
+    width: auto;
+}
+#search-form .field {
+    width: 258px;
+}
+#search-form .field.code {
+    width: 115px;
+	margin-left: 10px;
+}
+#search-form label {
+    margin: 0 0 0 6px;
+}
+.btn-link {
+	display: inline-block;
+	width: 95px;
+    margin-right: 10px;
+}
+#search-form a, #search-form span {
+
+}
+#login-form {
+    display: none;
+    padding: 6px 0 0 20px;
+}
+#login-form ul {
+    display: inline-block;
+}
+#login-form ul:first-child {
+    margin-right: 20px;
+}
+#login-form li:first-child {
+    margin-bottom: 6px;
+}
+#login-form li + li {
+    margin-bottom: 6px;
+}
+#login-form li:first-child label {
+    margin-left: 3px;
+    text-transform: uppercase;
+}
+#login-form .field {
+    height: 23px !important;
+    padding-top: 5px !important;
+    width: 182px;
+}
+#login-form li + li + li span {
+    margin-left: 3px;
+}
+#login-form li + li + li label {
+    margin-left: 9px;
+}
+#login-form .in-enter {
+    background: url("/img/btn-search.png") no-repeat scroll -99px 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 36px;
+    left: 468px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    text-indent: -9999px;
+    top: 25px;
+    width: 99px;
+}
+#login-form .in-enter:hover {
+	background-position: -99px -36px;
+}
+#pred_result {
+	background: #fff;
+	display: none;
+	position: absolute;
+	margin: 0px;
+	width: 553px;
+	z-index: 999;
+	padding: 10px 0 10px 10px;
+}
+
+#pred_result .res-item {
+	padding: 0px 0px 10px 0;
+	margin-bottom: 10px;
+	border-bottom: 1px dotted #000;
+}
+
+#pred_result .res-item:last-child {
+	border: none;
+}
+#pred_result .res-left, 
+#pred_result .res-right {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 15px;
+}
+#pred_result .res-right { 
+	margin-right: 0px;
+}
+
+#pred_result .res-image {
+	width: 57px;
+	height: 63px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+#pred_result .res-image img {
+	max-width: 57px;
+	max-height: 63px;
+}
+#pred_result .res-top, 
+#pred_result .res-middle, 
+#pred_result .res-bottom {
+	display: block;
+	padding-bottom: 5px;
+	width: 470px;
+}
+
+#pred_result .res-item .res-name {
+	color: #1b7192;
+	min-width: 130px;
+	max-width: 210px;
+	height: 16px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0px 10px 0 0;
+	font: Bold 13px "Trebuchet MS";
+	text-decoration: none;
+}
+#pred_result .res-item .b-product-rating {
+	background: url(/img/star-small.png) no-repeat scroll 0 0 transparent;
+	width: 70px;
+	margin: 0 15px 3px 0;
+	height: 11px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+#pred_result .res-item .b-product-rating.star-5 {
+    background-position: 0 -11px;
+}
+#pred_result .res-item .b-product-rating.star-4 {
+    background-position: 0 -22px;
+}
+#pred_result .res-item .b-product-rating.star-3 {
+    background-position: 0 -33px;
+}
+#pred_result .res-item .b-product-rating.star-2 {
+    background-position: 0 -44px;
+}
+#pred_result .res-item .b-product-rating.star-1 {
+    background-position: 0 -55px;
+}
+#pred_result .res-item .res-rascvetki {
+	display: inline-block;
+	vertical-align: bottom;
+	max-width: 80px;
+}
+#pred_result .res-item .res-rascvetki a {
+	font: 12px "Trebuchet MS";	
+	color: #1b7192;
+	text-decoration: none;
+}
+#pred_result .res-item .res-rascvetki a:hover {
+	text-decoration: underline;
+}	
+#pred_result .res-item .res-podrobnee {
+	display: block;
+	position: absolute;
+	margin: -18px 0 0 388px;
+	font: 11px "Trebuchet MS";	
+	color: #ededed;
+	padding: 5px 10px;
+	background: #00558b;
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+#pred_result .res-item .res-price {
+	display: inline-block; 
+	vertical-align: bottom;
+	width: 225px;	
+	color: #232323 !important;
+	font: Bold 13px "Trebuchet MS";
+}
+
+#pred_result .res-item .res-price span {
+	display: inline-block; 
+	vertical-align: bottom;
+}
+
+#pred_result .res-item .res-price span {
+	color: #232323 !important;
+	font: Bold 13px "Trebuchet MS";
+	text-decoration: none;
+}
+
+#pred_result .res-item .blr {
+	display: inline-block; 
+	vertical-align: bottom;
+	color: #232323 !important;
+	font: 12px "Trebuchet MS";
+	text-decoration: none;
+}
+#pred_result .res-item .blr span {
+	color: #232323 !important;
+	font: 12px "Trebuchet MS";
+	text-decoration: none;
+}
+
+#pred_result .res-item .res-price.gift {
+	width: 190px;
+	color: #878787 !important;
+	font: Bold 12px "Trebuchet MS";
+}
+
+#pred_result .res-bottom a {
+	color: #005d93 !important;
+	font: 12px "Trebuchet MS";
+	text-decoration: none;
+	width: 110px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+#pred_result .res-bottom a:hover {
+	text-decoration: underline;
+}
+#pred_result .res-bottom .res-nalichie {
+	text-align: right;
+	width: 118px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+#pred_result .res-bottom .res-nalichie .b-product-status {
+	color: #77a401 !important;
+	font: Bold 12px "Trebuchet MS";
+	text-decoration: none;
+}
+
+#pred_result .show_all_result_search {
+	display: block;
+	padding: 0;
+	text-align: center;
+}
+#pred_result .show_all_result_search a {
+	color: #1b7192;
+	font: Bold 13px "Trebuchet MS";	
+	text-decoration: none;
+}

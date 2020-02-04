@@ -1,0 +1,885 @@
+.importer-izgotovitel {
+	font: Bold 12.5px "Trebuchet MS";
+	color: #00769d;
+	text-decoration: none;
+}
+#ii-display {
+	display: none;
+}
+.b-breadcrumbs {
+    background: none repeat scroll 0 0 #008CBA;
+    border-radius: 6px 6px 6px 6px;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 24px;
+    padding: 8px 16px 10px;
+}
+.b-breadcrumbs li {
+    display: inline;
+}
+.b-breadcrumbs a {
+    color: #FFFFFF;
+    margin-right: 5px;
+    text-decoration: none;
+}
+.b-breadcrumbs a:hover {
+    text-decoration: underline;
+}
+.b-breadcrumbs a b {
+    font-weight: bold;
+}
+.l-product-info {
+    position: relative;
+}
+.b-product-image {
+    border: 2px solid #008CBE;
+    border-radius: 7px 7px 7px 7px;
+    margin-right: 49px;
+    position: relative;
+    text-align: center;
+    width: 379px;
+	height: 450px;
+}
+.b-product-image #pheader {
+    background: none repeat scroll 0 0 #E4E4E4;
+    border-radius: 7px 7px 0 0;
+    color: #005189;
+	position: absolute;
+	width: 359px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding: 8px 10px 10px;
+}
+.b-product-image .image {
+    display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 56px;
+    width: 379px;	
+    height: 400px;
+}
+.b-product-image .image img{
+	max-width: 362px;
+	max-height: 380px;
+}
+.b-product-image .icon {
+    background: url("/img/icons.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    left: 100%;
+    margin-left: -30px;
+    position: absolute;
+}
+.b-product-image .icon.new {
+    height: 59px;
+    top: -10px;
+    width: 60px;
+}
+.b-product-image .icon.best {
+    background-position: 0 -59px;
+    height: 40px;
+    top: 33px;
+    width: 60px;
+}
+.b-product-short-desc {
+    background: none repeat scroll 0 0 #E7E7E7;
+    bottom: 0;
+    left: 430px;
+    overflow: hidden;
+    padding: 0px 0px 18px 0px;
+    position: absolute;
+    top: 0;
+    width: 437px;
+}
+.b-product-status{
+	font: 12px "Arial";
+	cursor: pointer;
+	text-decoration: underline;
+}
+.b-product-status:hover{
+	text-decoration: none;
+}
+.b-product-status.r1 { color: #0078ac; }
+.b-product-status.r2 { color: #924d4d; }
+.b-product-status.r3 { color: #009200; }
+.b-product-status.r4 { color: #924d4d; }
+.b-product-status.r5 { color: #924d4d; }
+.b-product-status.r6 { color: #787878; text-decoration: none; }
+
+.b-product-name {
+	font: 12.5px "Trebuchet MS",sans-serif !important;
+	color: #000b59;
+	padding: 0px 15px;
+	width: 100%;
+	height: 54px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;	
+}
+.b-product-short-desc_content {
+    background-color: #f7f7f7;
+    height: 255px;
+}
+.b-product-short-desc_content .icons{
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 0px;
+	margin: 10px 0 0 10px;
+	width: 205px;
+	text-decoration: none;
+	height: 72px;
+}
+.b-product-short-desc_content .icons:hover span b {
+	border-bottom: 1px dotted #f7f7f7;
+}
+.b-product-short-desc_content .icons i{
+    background: url(/img/catalog/icons.png);
+	float: left;
+	width: 80px;
+	height: 72px;
+}
+.b-product-short-desc_content .icons span{
+	display: table-cell;
+	vertical-align: middle;
+	width: 130px;
+	height: 72px;
+}
+.b-product-short-desc_content .icons.dostavka span{
+	width: 125px;	
+}
+.b-product-short-desc_content .icons.deshevle span{
+	width: 115px;	
+}
+.b-product-short-desc_content .icons.dostavka_blr span{
+	width: 84px;	
+}
+.b-product-short-desc_content .icons.discont span{
+	width: 84px;
+}
+.b-product-short-desc_content .icons span b{
+	font: 15px "Impact", "Arial";
+	text-transform: uppercase;
+	color: #0179a1;
+	display: block;
+	text-decoration: none;
+	border-bottom: 1px dotted #0179a1;
+}
+.b-product-short-desc_content .icons.dostavka i{
+	background-position: 0 10px;
+}
+.b-product-short-desc_content .icons.dostavka_blr i{
+	background-position: -112px 15px;
+	width: 92px;	
+}
+.b-product-short-desc_content .icons.deshevle i{
+	background-position: 0 -70px;
+}
+.b-product-short-desc_content .icons.discont i{
+	background-position: -105px -65px;
+	width: 92px;
+}
+
+.b-product-short-desc_content .btn_s {
+	width: 106px;
+	height: 36px;
+	display: inline-block;
+	margin: 30px 0 0 10px;
+	}
+
+.b-product-short-desc_content .btn_s.skidka {
+	background: url(/img/catalog/skidka_btn.png);
+	width: 155px;
+	margin: 30px 0 0 20px;	
+}
+
+.b-product-short-desc_content .btn_sborka {
+	margin: 20px 0 0 59px;
+	display: inline-block;
+	padding-left: 55px;
+	font: 15px "Impact", "Tahoma", "Arial";	
+	color: #0179a1;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-bottom: 1px dotted #0179a1;
+}
+.b-product-short-desc_content .btn_sborka:hover {
+	border: none;
+}
+.b-product-short-desc_content .btn_sborka span {
+	background: #f7f7f7 url(/img/catalog/sborka_icon.png) no-repeat left;
+	margin: -12px 0 0 -55px;
+	width: 44px;
+	height: 43px;
+	position: absolute;
+	padding-right: 10px;
+	display: block;
+}
+
+.b-product-short-desc_content .btn_s.akciya {
+	background: url(/img/catalog/akciya_btn.png);
+	margin: 30px 0 0 10px;
+}
+.b-product-short-desc_content .btn_s.skidka:hover, 
+.b-product-short-desc_content .btn_s.sborka:hover, 
+.b-product-short-desc_content .btn_s.akciya:hover {
+	background-position: 0 -36px;
+}	
+.b-product-short-desc .b-fl-character {
+    font: 12.5px "Trebuchet MS", "Arial",sans-serif;
+	color: #00769d;
+	width: 385px;
+	height: 70px;
+}
+.b-product-short-desc .b-fl-wrapper {
+    background: none repeat scroll 0 0 #E7E7E7;
+    padding: 20px 0 0 34px;
+    width: 100%;
+}
+.b-product-main-features {
+    color: #00769d;
+    display: inline-block;
+    font: 12.5px/17px "Trebuchet MS", "Arial",sans-serif;
+    margin-right: 15px;
+    vertical-align: bottom;
+    width: 240px;
+}
+.b-product-warning {
+	padding-top: 30px;
+    color: #006388;
+    font: 12.5px/18px "Arial",sans-serif;
+}
+.b-product-video {
+	padding-top: 30px;
+    text-align: center;
+}
+.b-product-main-features span{
+	color: #0079A2; 
+	font-size: 13px; 
+	padding-top: 20px; 
+	text-align: justify;
+}
+.b-product-links {
+    display: inline-block;
+    vertical-align: bottom;
+    white-space: nowrap;
+    width: 130px;
+}
+.b-product-links a {
+    color: #0070AC;
+    font-size: 13px;
+    line-height: 17px;
+}
+.b-product-media-tabs {
+    float: left;
+    margin: 14px 45px 0 -2px;
+    padding-bottom: 20px;
+    position: relative;
+    vertical-align: top;
+    width: 387px;
+}
+.b-product-media-tabs .ui-tabs-nav {
+    bottom: 0;
+    position: absolute;
+}
+.b-product-media-tabs .tabs-panel {
+    width: 100%;
+}
+.b-product-media-tabs .tabs-panel li {
+    display: inline-block;
+    white-space: nowrap;
+}
+.b-product-media-tabs .tabs-panel li:first-child {
+    padding-left: 25px;
+    /*width: 88px;*/
+	width: 335px;
+	text-align: center;	
+}
+.b-product-media-tabs .tabs-panel li + li {
+    padding-left: 42px;
+    width: 71px;
+}
+.b-product-media-tabs .tabs-panel li + li + li {
+    padding-left: 94px;
+    width: 19px;
+}
+.b-product-media-tabs .tabs-panel a {
+    color: #005687;
+    font-size: 13px;
+    font-style: italic;
+    text-decoration: underline;
+}
+.b-product-media-tabs .tabs-panel a:hover {
+    text-decoration: underline;
+}
+.b-product-media-tabs .ui-tabs-selected a {
+    font-weight: bold;
+}
+.b-product-media-carousel ul {
+    letter-spacing: -0.31em;
+    word-spacing: -0.43em;
+}
+.b-product-media-carousel li {
+    display: inline-block;
+    letter-spacing: normal;
+    vertical-align: top;
+    word-spacing: normal;
+}
+.b-product-media-carousel a {
+    border: 1px solid #005B8A;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    margin: 1px 1px 0;
+}
+.b-product-media-carousel .active {
+    border-width: 2px;
+    margin: 0px;
+}
+.b-product-media-carousel li {
+	width: 100px;
+	height: 96px;
+	display: block;
+}
+.b-product-media-carousel li a {
+	width: 100px;
+	height: 96px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;	
+}
+.b-product-media-carousel li a img {
+    max-width: 100px;
+	max-height: 96px;
+}
+.b-product-media-carousel .jcarousel-container-horizontal {
+    padding: 0 22px 0 25px;
+    width: 340px;
+}
+.b-product-media-carousel .jcarousel-clip {
+    overflow: hidden;
+}
+.b-product-media-carousel .jcarousel-clip-horizontal {
+    height: 104px;
+    width: 340px;
+}
+.b-product-media-carousel .jcarousel-item {
+    height: 104px;
+    width: 106px;
+}
+.b-product-media-carousel .jcarousel-item-horizontal {
+    margin: 0 9px 0 0;
+}
+.b-product-media-carousel .jcarousel-item-placeholder {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #000000;
+}
+.b-product-media-carousel .jcarousel-next-horizontal, .b-product-media-carousel .jcarousel-prev-horizontal {
+    background: url("/img/icons.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 45px;
+    position: absolute;
+    top: 24px;
+    width: 22px;
+}
+.b-product-media-carousel .jcarousel-next-horizontal {
+    background-position: -36px -99px;
+    right: 0;
+}
+.b-product-media-carousel .jcarousel-next-horizontal:hover {
+    background-position: -80px -141px;
+    cursor: pointer;
+}
+.b-product-media-carousel .jcarousel-prev-horizontal {
+    background-position: -14px -99px;
+    left: 0;
+}
+.b-product-media-carousel .jcarousel-prev-horizontal:hover {
+    background-position: -58px -141px;
+    cursor: pointer;
+}
+.b-product-media-carousel .jcarousel-next-disabled-horizontal, .b-product-media-carousel .jcarousel-next-disabled-horizontal:hover {
+    background-position: -36px -99px;
+    cursor: default;
+}
+.b-product-media-carousel .jcarousel-prev-disabled-horizontal, .b-product-media-carousel .jcarousel-prev-disabled-horizontal:hover {
+    background-position: -14px -99px;
+    cursor: default;
+}
+.b-product-buy {
+    display: inline-block;
+    vertical-align: top;
+    width: 437px;
+}
+.b-product-buy .inner {
+    background: none repeat scroll 0 0 #E7E7E7;
+    margin-bottom: 2px;
+    min-height: 80px;
+    padding: 22px 16px 10px 34px;
+    position: relative;
+}
+.l-product-prices {
+    display: inline-block;
+    vertical-align: top;
+	width: 200px;
+}
+.b-product-price {
+    color: #00769D;
+	height: 38px;
+	display: table-cell;
+	vertical-align: middle;	
+    font: 14px "Trebuchet MS",sans-serif;
+}
+.b-product-price.old {
+	display: block;
+	text-align: center;
+	height: auto;	
+}
+.b-product-price.old .cena-old {
+	color: #848484;
+	text-decoration: line-through;
+	margin-left: 40px;
+}
+.b-product-price > span {
+    font-size: 17px;
+}
+.b-product-price span span {
+    font-size: 27px;
+    font-weight: normal;
+}
+.b-product-price span .byr {
+    font-size: 27px;
+}
+.b-product-price span.cena-old .byr {
+    font-size: 18px;
+}
+.b-gift {
+    background: url("/img/podarok.png") no-repeat scroll 0 0 transparent;
+    position: absolute;
+    height: 104px;
+    width: 106px;
+	bottom: -5px;
+	right: -6px;
+}
+.b-gift a {
+    display: inline-block;
+    vertical-align: top;
+    height: 51px;
+    text-indent: -9999px;
+    width: 47px;
+}
+.b-raffle_icon {
+    background: url("/img/raffle_icon.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    vertical-align: top;
+    height: 31px;
+    margin: 48px 0px 0 0px;
+    width: 52px;
+}
+.b-product-buttons {
+    float: right;
+}
+.b-product-buttons li:first-child {
+    margin: 0 0 4px -1px;
+}
+.b-print {
+    color: #005687;
+    cursor: pointer;
+    font-size: 13px;
+    font-style: italic;
+    margin: 0 20px 0 34px;
+    text-decoration: underline;
+}
+.b-print:hover {
+    text-decoration: none;
+}
+.b-social {
+    display: inline-block;
+}
+.b-product-info-tabs {
+    margin-top: 48px;
+}
+.b-product-info-tabs > ul li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #0092C0;
+    border-color: #00487C;
+    border-image: none;
+    border-radius: 7px 7px 0 0;
+    border-style: solid;
+    border-width: 2px 2px 0;
+    display: inline-block;
+    margin-right: -12px;
+    position: relative;
+    top: 2px;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.b-product-info-tabs > ul li:first-child {
+    z-index: 9;
+}
+.b-product-info-tabs > ul li + li {
+    z-index: 8;
+}
+.b-product-info-tabs > ul li + li + li {
+    z-index: 7;
+}
+.b-product-info-tabs > ul li + li + li + li {
+    z-index: 6;
+}
+.b-product-info-tabs > ul li + li + li + li + li {
+    z-index: 5;
+}
+.b-product-info-tabs > ul li + li + li + li + li + li {
+    z-index: 4;
+}
+.b-product-info-tabs > ul a {
+    color: #FFFFFF;
+    display: block;
+    font-size: 16px;
+    height: 31px;
+    line-height: 31px;
+    padding: 0 18px;
+    text-decoration: none;
+}
+.b-product-info-tabs > ul a:hover {
+    text-decoration: none;
+}
+.b-product-info-tabs > ul .ui-tabs-selected {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding-bottom: 2px;
+    z-index: 10;
+}
+.b-product-info-tabs > ul .ui-tabs-selected a {
+    color: #0091C0;
+    padding: 0 6px;
+    text-indent: 0;
+}
+.b-product-info-tabs .tabs-content {
+    background: url("/img/pit-bg.png") no-repeat scroll 0 0 #008CBE;
+    padding: 2px;
+}
+.b-product-info-tabs .tabs-content > div {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 30px 24px;
+}
+.b-product-info-tabs .tabs-content .colors-tab {
+    padding: 30px 37px 15px;
+}
+.b-product-desc-tabs .tabs-panel {
+    margin-bottom: 18px;
+}
+.b-product-desc-tabs .tabs-panel li {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+}
+.b-product-desc-tabs .tabs-panel a {
+    color: #005687;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.b-product-desc-tabs .ui-tabs-selected a {
+    font-weight: bold;
+    text-decoration: none;
+}
+.b-product-features {
+    width: 100%;
+}
+
+.b-product-features td {
+    background: none repeat scroll 0 0 #E1E1E1;
+    color: #006388;
+    font-size: 14px;
+    padding: 8px 26px;
+    vertical-align: middle;
+}
+.b-product-features td a {
+    color: #006388;
+    text-decoration: underline;
+}
+.b-product-features td a:hover {
+    text-decoration: none;
+}
+.b-product-features td:first-child {
+    border-right: 1px solid #FFFFFF;
+    width: 35%;
+}
+.b-product-features td + td {
+    color: #565656;
+    font-size: 13px;
+    text-align: center;
+}
+.b-product-features tr:nth-child(even) td {
+    background: none repeat scroll 0 0 #F0F0F0;
+}
+.b-product-features tr.head td {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #747474;
+    font-size: 15px;
+    padding: 34px 0 14px;
+    text-transform: uppercase;
+}
+.b-product-features .head:first-child td {
+    padding-top: 0;
+}
+.b-product-full-desc {
+    color: #00769D !important;
+    font: 13px/1.3 "Trebuchet MS",sans-serif !important;
+}
+.h-product-colors {
+    margin-bottom: 30px;
+}
+.b-product-colors .head {
+    background: url("/img/pch-bg.png") repeat-x scroll 0 6px transparent;
+}
+.b-product-colors .head span {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #006A8C;
+    font: 17px/0 EuropeExtNormal,sans-serif;
+    padding-right: 9px;
+}
+.b-product-colors ul {
+    letter-spacing: -0.31em;
+    margin: 0 0 0 -40px;
+    word-spacing: -0.43em;
+}
+.b-product-colors li {
+    display: inline-block;
+    letter-spacing: normal;
+    margin: 25px 0 15px 40px;
+    text-align: center;
+    vertical-align: top;
+    word-spacing: normal;
+}
+.b-product-colors .photo {
+    border: 1px solid #005B8A;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	display: block;
+    margin-bottom: 10px;
+}
+.b-product-colors .photo .image{
+    display: table-cell;
+	vertical-align: middle;	
+	width: 232px;
+	height: 244px;
+}
+.b-product-colors .photo img{
+	max-width: 205px;
+    max-height: 237px;
+}
+.b-product-colors .name {
+    background: none repeat scroll 0 0 #E7E7E7;
+    color: #006AA7;
+    font-size: 14px;
+    height: 26px;
+    line-height: 25px;
+    overflow: hidden;
+    text-align: center;
+    width: 232px;
+	margin-bottom: 3px;
+}
+
+
+.b-related-products .view-switcher li {
+    color: #005687;
+    cursor: pointer;
+    display: inline;
+    font-size: 13px;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+.b-related-products .view-switcher .active {
+    text-decoration: none;
+}
+.b-related-products .list, .b-related-products .grid {
+    margin-top: -24px;
+}
+.b-related-products .list > li, .b-related-products .grid > li {
+    margin-top: 40px;
+}
+.b-related-products .l-left, .b-related-products .l-right {
+    display: inline-block;
+    vertical-align: top;
+}
+.b-related-products .l-left {
+    margin-right: 20px;
+}
+.b-related-products .l-right {
+    width: 540px;
+}
+.b-related-products .desc {
+    color: #00769D !important;
+    font: 13px/1.3 "Trebuchet MS",sans-serif !important;
+    margin-bottom: 12px;
+    min-height: 224px;
+}
+.b-related-products .photo {
+    border: 1px solid #005B8A;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 14px;
+	height: 263px;
+}
+.b-related-products .photo img, .b-related-products .photo .no-img {
+    padding: 0px;
+	max-width: 235px;
+}
+.b-related-products .photo .no-img {
+    display: inline-block;
+    height: 237px;
+    width: 205px;
+}
+.b-related-products .price {
+    color: #006AA7;
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+}
+.b-related-products .price span {
+    font-size: 21px;
+}
+.b-related-products .buttons li {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: top;
+}
+.b-related-products .buttons li + li {
+    margin-top: 1px;
+}
+.b-related-products .list .name {
+    display: none;
+}
+.b-related-products .grid {
+    letter-spacing: -0.31em;
+    margin-left: -40px;
+    word-spacing: -0.43em;
+}
+.b-related-products .grid > li {
+    display: inline-block;
+    letter-spacing: normal;
+    margin-left: 40px;
+    text-align: center;
+    vertical-align: top;
+    word-spacing: normal;
+}
+.b-related-products .grid .l-left {
+    margin: 0;
+}
+.b-related-products .grid .l-right {
+    display: none;
+}
+.b-related-products .grid .photo {
+    padding: 0;
+	display: block;
+}
+.b-related-products .grid .photo .image {
+	width: 232px;
+	height: 237px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	overflow: hidden;	
+}
+.b-related-products .grid .photo img, .b-related-products .grid .photo .no-img {
+    padding: 0px;
+	max-width: 205px;
+	max-height: 237px;
+}
+.b-related-products .grid .name {
+    background: none repeat scroll 0 0 #E7E7E7;
+    color: #006AA7;
+    display: block;
+    font-size: 14px;
+    height: 26px;
+    line-height: 25px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    width: 232px;
+}
+.b-related-products .grid .name:hover {
+    text-decoration: none;
+}
+
+.d-currency {
+	display: inline-block;
+	width: 140px;
+	height: 25px;
+	position: relative;
+	top: -3px;
+}
+
+.d-currency li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.d-currency a {
+    background: none repeat scroll 0 0 #ededed;
+    color: #585858;
+	border: 1px solid #ededed;
+	border-top: none;
+    display: block;
+    font: 14px/25px "Trebuchet MS",Arial,Helvetica,sans-serif;
+    height: 25px;
+    text-align: center;
+    text-decoration: none;
+    width: 56px;
+}
+.d-currency a:hover {
+    text-decoration: none;		
+}
+.d-currency li.active a {
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #d5d5d5;
+	border-top: none;
+}
+
+.table-catalog-sklad {
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	position: relative;
+	top: -4px;
+}
+
+.table-catalog-sklad table {
+	width: 100%;
+}
+
+.table-catalog-sklad table td {
+	padding: 2px;
+	width: 30px;
+	border: 1px solid #005b8a;
+	color: #006aa7;
+	font: 14px "Arial";
+	background: #e7e7e7;
+}
+
+.show-banner {
+	padding-top: 45px;
+	text-align: center;
+}
+.show-banner div {
+	font-weight: Bold;
+	font-family: Tahoma;
+	text-transform: uppercase;	
+	text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff;
+}
+.show-banner .h1 {
+	font-size: 49px;
+	color: #0e800e;
+}
+.show-banner .h2 {
+	font-size: 32px;
+	color: #006e9f;
+}
+.show-banner .h2 strong {
+	font-size: 50px;
+	color: #dc0000;
+}
+.show-banner .h3 {
+	font-size: 22px;
+	color: #1a611a;
+}
+.show-banner .h4 {
+	font-size: 30px;
+	color: #006e9f;
+}

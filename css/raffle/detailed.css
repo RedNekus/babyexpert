@@ -1,0 +1,149 @@
+.raffle-detailed-content {
+	width: 880px;
+}
+
+.left-raffle,
+.right-raffle {
+	display: inline-block;
+	vertical-align: top;
+	width: 382px;
+}
+
+.right-raffle {
+	margin-left: 25px;
+	width: 461px;
+}
+
+.l-image-raffle .image {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 378px;
+	height: 442px;
+	border: 2px solid #008cbe;
+	border-radius: 5px;
+}
+
+.l-image-raffle .image img {
+	max-width: 378px;
+	max-height: 442px;
+}
+
+.l-descr-raffle h2 {
+	font: 16.67px "Trebuchet MS";
+	color: #0087b4;
+	margin: 10px 0;
+}
+
+.l-descr-raffle p {
+	font: 14px "Trebuchet MS";
+	color: #515151;
+}
+
+.l-timer-raffle {
+	padding: 20px;
+	text-align: center;
+}
+
+.l-timer-raffle .l-head-raffle {
+	font: 17px "Trebuchet MS";
+	color: #2b2a2a;
+}
+
+.l-timer-raffle .l-body-raffle {
+	font: 43px "impactreg";
+	color: #2b2a2a;
+	border: 1px solid #c6c6c6;
+	border-radius: 5px;
+	width: 190px;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 0px 0 10px;
+	text-align: left;
+	margin: 5px 0px;
+}
+
+.l-timer-raffle .l-body-raffle .t-block {
+	width: 45px;
+	padding-left: 5px;
+	text-align: left;
+	display: inline-block;
+}
+
+.l-timer-raffle .l-body-raffle .h-block {
+	width: 70px;
+}
+
+.l-timer-raffle .l-link-video {
+	padding: 0 15px;
+	text-align: center;
+	margin: 15px 0px 5px 0;
+}
+
+.l-timer-raffle .l-link-video a {
+	color: #0087b4;
+	font: 16.67px "Trebuchet MS";
+	text-decoration: none;
+	border-bottom: 1px dotted #0087b4;
+}
+
+.l-timer-raffle .l-link-video a:hover {
+	border: none;
+}
+.l-timer-raffle .l-body-raffle.text {
+	font-size: 37px;
+	color: #fff;
+	text-shadow: 1px 1px 1px #074c94, -1px 1px 1px #074c94, 1px -1px 1px #074c94, -1px -1px 1px #074c94;
+	background: #0154b0;
+	background: -moz-linear-gradient(top,  #0154b0 0%, #0a5eb6 25%, #0e62bc 50%, #1f69c2 75%, #216ec6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0154b0), color-stop(25%,#0a5eb6), color-stop(50%,#0e62bc), color-stop(75%,#1f69c2), color-stop(100%,#216ec6));
+	background: -webkit-linear-gradient(top,  #0154b0 0%,#0a5eb6 25%,#0e62bc 50%,#1f69c2 75%,#216ec6 100%);
+	background: -o-linear-gradient(top,  #0154b0 0%,#0a5eb6 25%,#0e62bc 50%,#1f69c2 75%,#216ec6 100%);
+	background: -ms-linear-gradient(top,  #0154b0 0%,#0a5eb6 25%,#0e62bc 50%,#1f69c2 75%,#216ec6 100%);
+	background: linear-gradient(to bottom,  #0154b0 0%,#0a5eb6 25%,#0e62bc 50%,#1f69c2 75%,#216ec6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0154b0', endColorstr='#216ec6',GradientType=0 );
+	width: 220px;
+	padding: 5px;
+	
+}
+
+.table-raffle {
+	width: 100%;
+}
+.table-raffle tr td {
+	padding: 8px 5px;
+	text-align: center;
+	font: 16.67px "Trebuchet MS";
+	color: #202020;
+	background: #dcdcdc;
+}
+.table-raffle tr:nth-child(2n) td { 
+	background: #e8e8e8;	
+}
+.table-raffle tr.winner td {
+	padding: 8px 5px;
+	text-align: center;
+	font: 16.67px "Trebuchet MS";
+	color: #fff;
+	border-top: 1px soldi #f5f4ec;
+	border-bottom: 1px solid #b3ac67;
+	text-shadow: 1px 2px 5px rgba(0,0,0,0.75);	
+	background: #a08129;
+	background: -moz-linear-gradient(top,  #a08129 0%, #e9c95a 10%, #c5a03d 40%, #906e1d 70%, #e1bf57 86%, #f0db67 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a08129), color-stop(10%,#e9c95a), color-stop(40%,#c5a03d), color-stop(70%,#906e1d), color-stop(86%,#e1bf57), color-stop(100%,#f0db67));
+	background: -webkit-linear-gradient(top,  #a08129 0%,#e9c95a 10%,#c5a03d 40%,#906e1d 70%,#e1bf57 86%,#f0db67 100%);
+	background: -o-linear-gradient(top,  #a08129 0%,#e9c95a 10%,#c5a03d 40%,#906e1d 70%,#e1bf57 86%,#f0db67 100%);
+	background: -ms-linear-gradient(top,  #a08129 0%,#e9c95a 10%,#c5a03d 40%,#906e1d 70%,#e1bf57 86%,#f0db67 100%);
+	background: linear-gradient(to bottom,  #a08129 0%,#e9c95a 10%,#c5a03d 40%,#906e1d 70%,#e1bf57 86%,#f0db67 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a08129', endColorstr='#f0db67',GradientType=0 );
+
+}
+.table-raffle tr.head-raffle td {
+	background: #0087b4;
+	color: #fff;
+	border-bottom: 2px solid #fff;
+}
+
+.table-raffle tr td.head-nomer { width: 10%; }
+.table-raffle tr td.head-nome-zakaza { width: 30%; }
+.table-raffle tr td.head-name { width: 60%; }

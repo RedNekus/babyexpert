@@ -1,0 +1,4 @@
+@import url("/css/reset.css");
+body {font: 14px "Trebuchet MS", Sans-Serif; color: #000; background-color: #fff; padding: 5px;}
+a {color: #ffba4b;}
+a:hover {color: #ffba4b; text-decoration: none;}

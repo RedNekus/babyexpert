@@ -1,0 +1,102 @@
+
+/* === Basket ======================================================== */
+
+.b-basket {
+    position: relative;
+    display: inline-block;
+    margin: 29px 24px 0 28px;
+    padding: 3px 4px 4px 25px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.b-basket .icon-basket {
+    position: absolute;
+    left: -30px;
+    top: -15px;
+    height: 43px;
+    width: 49px;
+    z-index: 901;
+    background: url(/img/sprite.png) no-repeat;
+}
+
+.b-basket span {
+    margin-right: 11px;
+}
+
+.b-basket b {
+    color: #eddd18;
+    font: normal 14px Arial, Helvetica, sans-serif;
+}
+
+.b-basket .contents {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 160px;
+    padding: 12px 9px 6px 6px;
+    background: #202022;
+    border: 1px solid #fff;
+    z-index: 900;
+}
+
+.b-basket .contents table {
+    width: 100%;
+}
+
+.b-basket .contents td,
+.b-basket .contents td a {
+    color: #eaeaea;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.b-basket .contents table a:hover {
+    text-decoration: underline;
+}
+
+.b-basket .contents td {
+    padding: 0 0 15px;
+    white-space: nowrap;
+}
+
+.b-basket .contents td:first-child {
+    padding-right: 8px;
+}
+
+.b-basket .contents .buttons li {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+.b-basket .contents .buttons li + li {
+    text-align: right;
+}
+
+.b-basket .contents .btn-checkout,
+.b-basket .contents .btn-clear {
+    display: inline-block;    
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.b-basket .contents .btn-checkout:hover,
+.b-basket .contents .btn-clear:hover {
+    text-decoration: none;
+}
+
+.b-basket .contents .btn-checkout {
+    padding: 4px 12px;
+    background: #e2ebf7;
+    color: #202022;
+}
+
+.b-basket .contents .btn-clear {
+    padding: 3px 10px;
+    background: #202022;
+    border: 1px solid #e2ebf7;
+    color: #e2ebf7;
+}
+

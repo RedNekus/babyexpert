@@ -1,0 +1,112 @@
+html, body, div, p, h1, ul, li,
+fieldset, form, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background: #dfe8f6;
+    color: #000;
+    font: 12px/14px Tahoma, Arial, Verdana, sans-serif;
+}
+
+#login-box {
+    margin: 16% auto 0;
+    width: 300px;
+    background: #dfe9f6;
+    border: 1px solid #99bce8;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+h1{
+    height: 23px;
+    padding: 0 5px;
+    background: #cbddf3 url(/img/admin/icons/lbg-bg.gif) repeat-x;
+    border-bottom: 1px solid #99bce8;
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    box-shadow: 0 1px 0 0 #f4f8fd inset, -1px 0 0 0 #f4f8fd inset, 1px 0 0 0 #f4f8fd inset;
+    -moz-box-shadow: 0 1px 0 0 #f4f8fd inset, -1px 0 0 0 #f4f8fd inset, 1px 0 0 0 #f4f8fd inset;
+    -webkit-box-shadow: 0 1px 0 0 #f4f8fd inset, -1px 0 0 0 #f4f8fd inset, 1px 0 0 0 #f4f8fd inset; 
+    color: #04408c;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 21px;
+}
+
+input, label {
+    display: block;
+    font: 12px Tahoma, Arial, Verdana, sans-serif;
+}
+
+form {
+    padding: 10px 20px 14px;
+    overflow: hidden;
+}
+
+form div {
+	padding-left: 60px;
+}
+
+label {
+    float: left;
+    margin-left: -60px;
+    padding: 4px 0 0;
+}
+
+input {
+    height: 16px;
+    margin: 4px 0 1px;
+    width: 100%;
+    background: #fff url(/img/admin/icons/text-bg.gif) repeat-x;
+    border: 1px solid #b5b8c8;
+    color: #000;
+    line-height: 18px;
+}
+
+input:focus {
+    border-color: #7eadd9;
+}
+
+button {
+	float: right;
+    padding: 0;
+    background: none;
+    border: none;
+    overflow: visible;
+    cursor: pointer;
+}
+
+button span {
+	display: block;
+    height: 20px;
+    margin: 4px -4px 0 0;
+    padding: 0 20px;
+    background: url(/img/admin/icons/btn-bg.gif) repeat-x;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	font: 11px/20px Tahoma, Arial, Verdana, sans-serif;
+}
+
+button:hover span {
+    border-color: #b0ccf2;
+}
+
+.errors {
+	padding-bottom: 4px;
+    color: #f00;
+    font-size: 11px;
+}
