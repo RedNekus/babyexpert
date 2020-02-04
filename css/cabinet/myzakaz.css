@@ -1,0 +1,104 @@
+#myzakaz{
+	padding: 35px 0px;
+}
+
+.first-block{
+	padding: 0 0 10px 0px;
+	font: 14px/24px "Tahoma";
+	color: #2d2d2d;
+}
+.admin_menu{display: block; width: 820px; height: 35px; padding: 0px 0 0 20px;  border: 1px solid #afafaf; cursor: pointer; margin-bottom: 8px;}
+.admin_menu div{display: inline-block; vertical-align: top;}
+.admin_menu .date{font: Bold 14px "Tahoma"; color: #ac0403; padding-top: 7px;}
+.admin_menu .summa{font: Bold 14px "Tahoma"; color: #606060; padding-top: 3px; padding-left: 100px;}
+.admin_menu .summa b{font: Bold 18px "Tahoma"; color: #ac0403;}
+
+.admin_menu .openlist{background: url('/img/cabinet/arrow.png'); width: 90px; height: 16px; position: absolute; margin: 9px 0 0 718px; }
+.admin_menu.active .openlist{background: url('/img/cabinet/arrow.png'); background-position: 0 -16px; }
+.admin_content{width: 820px; padding: 0 10px 10px 10px; position: relative; top: -9px; border: 1px solid #afafaf; background-color: #f3f3f3;}
+.admin_content p{font: 14px "Arial"; color: #fff;}
+
+.admin_content .btn_eshe{background: url(/img/cabinet/btn.png); display: block; width: 173px; height: 44px;}
+.admin_content .btn_eshe:hover{background-position: 0 -44px;}
+.admin_content .summa{font: Bold 14px "Tahoma"; color: #606060; padding-top: 3px; padding-left: 100px;}
+.admin_content .summa b{font: Bold 18px "Tahoma"; color: #ac0403;}
+
+
+.admin_content .line-block {
+	margin-top: 10px;
+	width: 810px;
+	padding: 5px;
+	height: 100px;
+	background-color: #efecec;
+}
+
+.admin_content .th-image {
+    width: 100px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.admin_content .th-image img {
+	width: 98px;
+	height: 98px;
+    border: 1px solid #fff;
+    vertical-align: middle;
+}
+
+.admin_content .th-name {
+	padding-left: 0px;
+    width: 360px;
+	padding-left: 20px;	
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;	
+}
+
+.admin_content .th-qty {
+    width: 100px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;	
+}
+
+.admin_content .th-total-cena {
+    width: 190px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.admin_content .name {
+	width: 360px;
+    font: Bold 17px "Tahoma";
+	color: #343434;
+	height: 69px;
+	display: table-cell;
+	vertical-align: middle;
+	background: url('/img/catalog/dot.png') no-repeat right;
+}
+
+.admin_content .cena {
+	width: 190px;
+    font: 14px "Arial";
+	color: #343434;
+	height: 69px;
+	display: table-cell;
+	vertical-align: middle;	
+}
+
+.admin_content .cena strong{
+    font: 17px "Tahoma";
+	color: #ac0403;
+}
+
+.admin_content .qty {
+	width: 170px;
+    display: inline-block;
+	height: 69px;
+	font: 17px "Tahoma";
+	color: #343434;
+	display: table-cell;
+	vertical-align: middle;
+	background: url('/img/catalog/dot.png') no-repeat right;
+}

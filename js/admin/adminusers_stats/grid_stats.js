@@ -69,7 +69,6 @@ $(document).ready(function() {
 	});	
 
 	function filtReset() {
-		console.log('55678');
 		TableStats.jqGrid('setGridParam',{search:false});
 
 		var postData = TableStats.jqGrid('getGridParam','postData');

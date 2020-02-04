@@ -1,0 +1,12 @@
+.b-products .pict .image {
+    display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+    width: 261px;
+    height: 252px;
+}
+.b-products .pict .image img{
+    display: inline-block;
+	max-width: 261px;
+	max-height: 252px;
+}

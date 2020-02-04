@@ -1,0 +1,155 @@
+@import "reset.css";
+html,body {background-color: #f2f2f2;}
+#wrapper_404 {background-image: url('/img/404.png'); width: 1200px; height: 746px; margin: auto;}
+#wrapper_404 .header {height: 290px;}
+#wrapper_404 .content {padding: 0 0 20px 55px;}
+#wrapper_404 .left, #wrapper_404 .right {
+	display: inline-block;
+	vertical-align: top;
+	width: 710px;
+	padding-right: 20px;	
+	}
+#wrapper_404 .right {
+	width: 400px;
+	padding: 0px;
+	}
+#wrapper_404 .b-categories > ul {
+    margin: 0px 0 0 2px;
+	background: url(/img/dot.png) repeat-y right;	
+}
+#wrapper_404 .b-categories > ul > li {
+    margin-bottom: 1px;
+	margin-right: 8px;
+    position: relative;
+	width: 222px;
+	display: inline-block;
+	vertical-align: top;
+}
+#wrapper_404 .b-categories > ul > li > a {
+    background: url("/img/s-nav.png") no-repeat scroll 0 0 #00658A;
+    color: #FFFFFF;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 30px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 222px;
+}
+#wrapper_404 .b-categories > ul > li:hover > a {
+    background-position: 0 -34px;
+}
+
+#wrapper_404 .b-links {
+	width: 270px;
+}
+
+#wrapper_404 .b-links li {
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+	padding: 5px 10px 10px 0px;
+}
+
+#wrapper_404 .b-links li a {
+	font: 14px "Tahoma";
+	display: inline-block;
+	padding-bottom: 2px;
+	color: #006595;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-bottom: 1px dotted #006595;
+}
+
+#wrapper_404 .b-links li a:hover {
+	border: none;
+}
+
+#wrapper_404 .bottom {
+	margin-top: 20px;
+	margin-left: 55px;
+}
+
+.b-home-tabs .tabs-panel {
+    background-color: #eaeaea;
+	border: 1px solid #fff;
+	padding: 10px;
+	width: 842px;
+    display: inline-block;
+	vertical-align: top;	
+	border-radius: 8px;
+}
+.b-home-tabs .tabs-panel li {
+    background: url("/img/h-tabs.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 42px;
+    margin-right: 0px;
+    vertical-align: top;
+}
+.b-home-tabs .tabs-panel li:first-child {
+    margin-right: 0;
+}
+.b-home-tabs .tabs-panel .new {
+    width: 147px;
+}
+.b-home-tabs .tabs-panel .new:hover {
+    background-position: 0 -42px;
+}
+.b-home-tabs .tabs-panel .best {
+    background-position: -150px 0;
+    width: 146px;
+}
+.b-home-tabs .tabs-panel .best:hover {
+    background-position: -150px -42px;
+}
+.b-home-tabs .tabs-panel .spec {
+    background-position: -300px 0;
+    width: 196px;
+}
+.b-home-tabs .tabs-panel .spec:hover {
+    background-position: -300px -42px;
+}
+.b-home-tabs .tabs-panel .tovarnedeli {
+    background-position: -499px 0;
+    width: 163px;
+}
+.b-home-tabs .tabs-panel .tovarnedeli:hover {
+    background-position: -499px -42px;
+}
+.b-home-tabs .tabs-panel .expert {
+    background-position: -662px 0;
+    width: 177px;
+}
+.b-home-tabs .tabs-panel .expert:hover {
+    background-position: -662px -42px;
+}
+
+.b-home-tabs .tabs-panel a {
+    display: block;
+    height: 100%;
+    text-indent: -9999px;
+}
+
+.b-home-tabs  .tabs-panel-r {
+	width: 200px;
+    display: inline-block;
+	vertical-align: top;
+}
+
+.b-home-tabs  .tabs-panel-r .sale a{
+	width: 172px;
+	height: 39px;
+	text-indent: -9999px;
+    display: inline-block;
+	margin: 13px 15px;
+    vertical-align: top;	
+	background: url(/img/skidka.png);
+}
+.b-home-tabs  .tabs-panel-r .sale a:hover {
+    background-position: 0px -39px;
+}
+
+

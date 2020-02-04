@@ -1,0 +1,29 @@
+.b-akciya {
+	padding-top: 14px;
+}
+
+.b-akciya h2 {
+	font: Bold 28.1px "Verdana";
+	color: #005a88;
+	width: 100%;
+	padding: 0px 0px 20px;
+	text-align: center;
+}
+
+.b-akciya .bi-podrobnee {
+	font: Bold 18px "Tahoma";
+	color: #005a88;
+	width: 100%;
+	padding: 20px 0px 20px;
+	text-align: center;
+}
+
+
+.b-akciya .bi-content {
+	font: 14px "Tahoma" !important;
+	color: #656565;
+	width: 100%;
+	padding: 0px;
+	text-align: left;
+}
+

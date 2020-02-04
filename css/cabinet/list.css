@@ -1,0 +1,51 @@
+#cabinet{
+	padding: 35px 0px;
+}
+
+.first-block{
+	padding: 0 0 10px 0px;
+	font: 14px/24px "Tahoma";
+	color: #2d2d2d;
+}
+.first-block b{
+	font: Bold 14px "Tahoma";
+	color: #2d2d2d;
+}
+
+.chebo_block{
+	margin-top: 40px;
+	width: 275px;
+	text-align: right;
+}
+
+.chebo_block label{
+	color: #2e2e2e;
+	font: 12px "Tahoma";
+	cursor: pointer;
+	border-bottom: 1px dotted #2e2e2e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.second-block a{
+	font-weight: Bold;
+	color: #efbf6d;
+	text-decoration: none;
+	border-bottom: 1px dotted #efbf6d;
+}
+
+.second-block a:hover{
+	border: none;
+}
