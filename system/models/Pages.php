@@ -11,7 +11,6 @@ class Pages {
 	public static function fetchContent($path = '', $id = '') {
 
 		$statement = 'SELECT * FROM `'.self::$_table.'` WHERE `path` = :path OR `id` = :id LIMIT 1';
-		
 		if (($result = DB::query($statement, Array('path' => $path, 'id' => $id), TRUE)) === FALSE) {
 			trigger_error('Ошибка при выполнении запроса к БД для получения содержимого страницы!', E_USER_ERROR);
 		}
@@ -19,9 +18,7 @@ class Pages {
 		if (empty($result)) {
 			trigger_error('Страница ['.(($path) ? $path : 'id:'.$id).'] в БД не найдена!', E_USER_ERROR);
 		}
-
 		return self::$_content = $result;
-	
 	}  
   
 	public static function getPageByID($id) {

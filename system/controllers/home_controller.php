@@ -1,5 +1,5 @@
 <?php
-
+setlocale(LC_ALL, 'ru_RU', 'ru_RU.UTF-8', 'ru', 'russian');  
 class Home_Controller {
     private $_content, $_config;
 
@@ -7,7 +7,7 @@ class Home_Controller {
 	  
 		$this->_content['left'] = Render::view('catalog/razdel');
 
-		Load::model(array("Catalog", "Images"));
+		Load::model(array("Catalog", "Images", "Reviews", "News"));
 		
 		$this->_config = Config::getParam('modules->catalog');
 		
@@ -18,11 +18,10 @@ class Home_Controller {
 				array(
 	
 					'items' => Catalog::getCollectionsActive(255,'prioritet','DESC',9),
-					
-					'makers' => Maker::getMakersForSite("active=1", "name", "ASC", Maker::getTotalMakers()),
-					
+					'makers' => Maker::getMakersForSite("active=1", "name", "ASC", Maker::getTotalMakers()),	
+					'reviews' => Reviews::getReviewsForMain('timestamp', 'DESC', 3),
+					'news' => News::getNews('timestamp', 'DESC', 3),
 					'imagepath' => $this->_config['image'],
-						
 					'i' => 1
 					
 				));

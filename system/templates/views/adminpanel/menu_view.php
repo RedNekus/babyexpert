@@ -74,6 +74,9 @@
 			
 		if(@$admin['pages_review']) 			
 		echo '<li><a href="/adminpanel/pages/">Страницы</a></li>';
+
+		if(@$admin['advantages_review']) 			
+		echo '<li><a href="/adminpanel/advantages/">Преимущества</a></li>';
 		?>
 		</ul>		
 	</li> 

@@ -1,176 +1,655 @@
 <?php 
-
-  UI::addCSS(array(
-	
-    '/css/catalog/list.css'
-	
-  ));
-
   $active = "";
-  $url_path = URL::getSegment(1);
+  //$url_path = URL::getSegment(1);
   Pages::fetchContent(URL::getPath());
-  
 ?>
-<div class="b-home-tabs h-mb">
-	<ul class="tabs-panel">
-		<li class="new <?php if ($url_path == "novinki") echo 'ui-tabs-selected'; ?>"><a href="/novinki/" >Новинки</a></li>
-		<li class="best <?php if ($url_path == "hity_prodazh") echo 'ui-tabs-selected'; ?>"><a href="/hity_prodazh/" >Хиты продаж</a></li>
-		<li class="spec <?php if ($url_path == "specpredlozheniya") echo 'ui-tabs-selected'; ?>"><a href="/specpredlozheniya/" >Спецпредложения</a></li>
-		<li class="tovarnedeli <?php if ($url_path == "tovary_nedeli") echo 'ui-tabs-selected'; ?>"><a href="/tovary_nedeli/" >Товары недели</a></li>
-		<li class="expert <?php if ($url_path == "vybor_eksperta") echo 'ui-tabs-selected'; ?>"><a href="/vybor_eksperta/" >Выбор эксперта</a></li>
-	</ul>
-	<div id="home-tab-1">
-		<div class="b-products">
-			<ul class="grid">
-				<?php foreach ($items as $item) : ?>
-				<li>
-					<div class="pict">
-						<a href="/product/<?php echo $item['path']; ?>/" class="name"><?php echo get_product_name($item); ?></a>
-						<a href="/product/<?php echo $item['path']; ?>/" class="image">
-						<img src="<?php echo $imagepath['small']['path'].insert_image($item['id']); ?>" alt="<?php echo $item['name']; ?>">
-						</a>
-						<div class="buttons">
-							<a href="/product/<?php echo $item['path']; ?>/#pit-tab-3" class="kol-colors"><?php get_count_colors($item['id']); ?></a>
-							<a href="#" class="status r<?php echo $item['status']; ?>"><?php get_status($item['status']); ?></a>
-							<a href="/product/<?php echo $item['path']; ?>/" class="btn-details">Подробнее</a>
-							<?php 
-							echo get_buttons_catalog($item['id']);  
-							if ($item['status'] != 4) {
-								if ($item['cena_old']>0 or $item['cena_blr_old']>0) {
-									echo '<span class="price price-old">
-										<div class="cena-old">'.transform_to_currency_old($item,true,true).'</div>
-										Цена: '.transform_to_currency($item).'
-									</span>';
-								} else {
-									echo '<span class="price">Цена: '.transform_to_currency($item).'</span>';
-								}
-							} else {
-								echo '<a href="#" class="status nvn">Снят с производства</a>';
-							}
-							?>
-						</div>
-						<?php if ($item['new']==1): ?><i class="icon new"></i><?php endif; ?>
-					</div>
-				</li>
-				<?php endforeach; ?>
-			</ul>			    
+<div class="slider-container">
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="img/slider.jpg" class="d-block w-100" alt="...">
+			</div>
+			<div class="carousel-item">
+				<img src="img/slider.jpg" class="d-block w-100" alt="...">
+			</div>
+			<div class="carousel-item">
+				<img src="img/slider.jpg" class="d-block w-100" alt="...">
+			</div>
 		</div>
-
-
-        <!-- Cloud -->
-        <div class="tag-cloud block cloud-kresla">
-            <div class="b-page-title">
-            <span>Популярные бренды автокресел</span></div>
-            <ul>
-                <li>
-                    <a href="/category/avtokresla/baby-design/">Baby Design</a>|
-                    <a href="/category/avtokresla/cybex/">Cybex</a>|
-                    <a href="/category/avtokresla/espiro/">Espiro</a>|
-                    <a href="/category/avtokresla/heyner/">Heyner</a>|
-                    <a href="/category/avtokresla/maxi-cosi/">Maxi Cosi</a>|
-                    <a href="/category/avtokresla/recaro/">Recaro</a>|
-                    <a href="/category/avtokresla/stm/">STM (Recaro)</a>|
-                    <a href="/category/avtokresla/baby-care/">Baby Care</a>|
-                    <a href="/category/avtokresla/bertoni/">Bertoni (Lorelli)</a>|
-                    <a href="/category/avtokresla/Brevi/">Brevi</a>|
-                    <a href="/category/avtokresla/Cam/">Cam</a>|
-                    <a href="/category/avtokresla/Caretero/">Caretero</a>|
-                    <a href="/category/avtokresla/Chicco/">Chicco</a>|
-                    <a href="/category/avtokresla/Graco/">Graco</a>|
-                    <a href="/category/avtokresla/Happy-Baby/">Happy Baby</a>|
-                    <a href="/category/avtokresla/Inglesina/">Inglesina</a>|
-                    <a href="/category/avtokresla/Peg-Perego/">Peg-Perego</a>|
-                    <a href="/category/avtokresla/Britax-Romer-/">Britax Romer</a>|
-                    <a href="/category/avtokresla/KinderKraft/">KinderKraft</a>
-                </li>
-            </ul>
-        </div>
-        <div class="tag-cloud block cloud-kalyaska">
-            <div class="b-page-title">
-                <span>Популярные бренды колясок</span></div>
-            <ul>
-                <li>
-                    <a href="/category/kolyaski/4baby/">4Baby</a>|
-                    <a href="/category/kolyaski/adamex/">Adamex</a>|
-                    <a href="/category/kolyaski/adbor/">Adbor</a>|
-                    <a href="/category/kolyaski/Aneco/">Aneco</a>|
-                    <a href="/category/kolyaski/Anmar/">Anmar</a>|
-                    <a href="/category/kolyaski/Aprica/">Aprica</a>|
-                    <a href="/category/kolyaski/Baby-Care/">Baby Care</a>|
-                    <a href="/category/kolyaski/Baby-Design/">Baby Design</a>|
-                    <a href="/category/kolyaski/BabyPoint/">BabyPoint</a>|
-                    <a href="/category/kolyaski/Bebetto/">Bebetto</a>|
-                    <a href="/category/kolyaski/bertoni/">Bertoni (Lorelli)</a>|
-                    <a href="/category/kolyaski/Brevi/">Brevi</a>|
-                    <a href="/category/kolyaski/Cam/">Cam</a>|
-                    <a href="/category/kolyaski/Camarelo/">Camarelo</a>|
-                    <a href="/category/kolyaski/Capella/">Capella</a>|
-                    <a href="/category/kolyaski/Chicco/">Chicco</a>|
-                    <a href="/category/kolyaski/Cozy/">Cozy</a>|
-                    <a href="/category/kolyaski/Cybex/">Cybex</a>|
-                    <a href="/category/kolyaski/EasyGo/">EasyGo</a>|
-                    <a href="/category/kolyaski/Espiro/">Espiro</a>|
-                    <a href="/category/kolyaski/FD-Design/">FD Design (ABC Design)</a>|
-                    <a href="/category/kolyaski/Geoby/">Geoby</a>|
-                    <a href="/category/kolyaski/Graco/">Graco</a>|
-                    <a href="/category/kolyaski/Happy-Baby/">Happy Baby</a>|
-                    <a href="/category/kolyaski/Inglesina/">Inglesina</a>|
-                    <a href="/category/kolyaski/Jetem/">Jetem</a>|
-                    <a href="/category/kolyaski/Lonex/">Lonex</a>|
-                    <a href="/category/kolyaski/Maclaren/">Maclaren</a>|
-                    <a href="/category/kolyaski/Marimex/">Marimex</a>|
-                    <a href="/category/kolyaski/Peg-Perego/">Peg-Perego</a>|
-                    <a href="/category/kolyaski/Recaro/">Recaro</a>|
-                    <a href="/category/kolyaski/Riko/">Riko</a>|
-                    <a href="/category/kolyaski/Roan/">Roan</a>|
-                    <a href="/category/kolyaski/Quatro/">Quatro</a>|
-                    <a href="/category/kolyaski/Tako/">Tako</a>|
-                    <a href="/category/kolyaski/Deltim/">Deltim</a>|
-                    <a href="/category/kolyaski/Hoco/">Hoco</a>|
-                    <a href="/category/kolyaski/NeoNato/">NeoNato</a>|
-                    <a href="/category/kolyaski/Silver-Cross/">Silver Cross</a>
-                </li>
-            </ul>
-        </div>
-        <div class="tag-cloud block cloud-stulchik">
-            <div class="b-page-title">
-                <span>Популярные бренды детских стульчиков</span></div>
-            <ul>
-                <li>
-                    <a href="/category/stulchiki/Amalfy/">Amalfy</a>|
-                    <a href="/category/stulchiki/Baby-Care/">Baby Care</a>|
-                    <a href="/category/stulchiki/Baby-Design/">Baby Design</a>|
-                    <a href="/category/stulchiki/BabyPoint/">BabyPoint</a>|
-                    <a href="/category/stulchiki/Bertoni/">Bertoni (Lorelli)</a>|
-                    <a href="/category/stulchiki/Cam/">Cam</a>|
-                    <a href="/category/stulchiki/Caretero/">Caretero</a>|
-                    <a href="/category/stulchiki/Chicco/">Chicco</a>|
-                    <a href="/category/stulchiki/Espiro/">Espiro</a>|
-                    <a href="/category/stulchiki/Globex/">Globex</a>|
-                    <a href="/category/stulchiki/Graco/">Graco</a>|
-                    <a href="/category/stulchiki/Inglesina/">Inglesina</a>|
-                    <a href="/category/stulchiki/Jetem/">Jetem</a>|
-                    <a href="/category/stulchiki/Kinderwood/">Kinderwood</a>|
-                    <a href="/category/stulchiki/Pali/">Pali</a>|
-                    <a href="/category/stulchiki/Peg-Perego/">Peg-Perego</a>|
-                    <a href="/category/stulchiki/S-line/">S-line</a>|
-                    <a href="/category/stulchiki/Shenma/">Shenma</a>|
-                    <a href="/category/stulchiki/vedruss/">Ведрусс</a>|
-                    <a href="/category/stulchiki/skv-kompani/">СКВ-компани</a>
-                </li>
-            </ul>
-        </div>
-        <!-- Cloud -->
-
-
-
-<!--		--><?php //echo get_clouds($makers); ?>
-
-		<div class="useful-info">
-			<div class="b-page-title"><span>Полезная информация</span></div>
-				<div class="content">
-					<?php echo Pages::getContent(); ?>
-				</div>
-		</div>			
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol>
+	</div>
+	<div class="goods-block">
+		<div class="col-6">
+			<h3><a href="#">ИК градусники</a></h3>
+			<img src="img/goods-img-1.jpg"/>
+		</div>
+		<div class="col-6">
+			<h3><a href="#">ИК градусники</a></h3>
+			<img src="img/goods-img-1.jpg"/>
+		</div>
+		<div class="col-6">
+			<h3><a href="#">ИК градусники</a></h3>
+			<img src="img/goods-img-1.jpg"/>
+		</div>
+		<div class="col-6">
+			<h3><a href="#">ИК градусники</a></h3>
+			<img src="img/goods-img-1.jpg"/>				
+		</div>
 	</div>
 </div>
+<div class="row">
+	<div class="col-12 col-lg-9 mb-3">
+		<div class="headers">
+			<button class="btn btn-lg btn-outline-info d-sm-none">Каталог</button>
+			<button class="btn btn-lg btn-info d-sm-none">Скидки и суперцены</button>
+			<div>
+				<a href="#" class="h2 active">Популярные товары</a>
+				<a href="#" class="h2">Акции</a>
+				<a href="#" class="h2">Рекомендуем</a>
+			</div>
+		</div>
+		<div id="carouselControls"  class="goods-slider carousel slide" data-ride="carousel">
+			<a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+				<img src="img/arr-left.png" />
+			</a>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="d-flex flex-wrap">
+						<div class="item">
+							<div class="img-wrapper">
+								<div class="sale">%</div>
+								<picture>
+									<source srcset="img/googs-img-big.jpg" media="(max-width: 575px)">
+									<source srcset="img/goods-img-2.jpg">
+									<img srcset="img/goods-img-2.jpg" alt="Мое основное изображение">
+								</picture>
+								<h6 class="card-subtitle">Toshiba</h6>
+							</div>
+							<div class="d-flex flex-column">
+								<h3><a href="#">Стиральная машина Miele WDB 020 W1 Classic</a></h3>
+								<div class="card-rating">
+									<div class="rating">
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+									</div>
+									<p class="text-success font-weight-bold">В наличии</p>
+								</div>
+								<div class="price-block">
+									<div>
+										<p class="old-price">1 439,00 руб</p>
+										<p class="price">1890,00 руб</p>
+									</div>
+									<div>
+										<p>экономия</p>
+										<p class="highlight">450,00</p>
+									</div>
+								</div>
+								<div class="d-none d-sm-block">
+									<div class="price">1890 <span>руб</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<div class="sale">%</div>
+								<picture>
+									<source srcset="img/googs-img-big.jpg" media="(max-width: 575px)">
+									<source srcset="img/goods-img-2.jpg">
+									<img srcset="img/goods-img-2.jpg" alt="Мое основное изображение">
+								</picture>
+								<h6 class="card-subtitle">Toshiba</h6>
+							</div>
+							<div class="d-flex flex-column">
+								<h3><a href="#">Стиральная машина Miele WDB 020 W1 Classic</a></h3>
+								<div class="card-rating">
+									<div class="rating">
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+									</div>
+									<p class="text-success font-weight-bold">В наличии</p>
+								</div>
+								<div class="price-block">
+									<div>
+										<p class="old-price">1 439,00 руб</p>
+										<p class="price">1890,00 руб</p>
+									</div>
+									<div>
+										<p>экономия</p>
+										<p class="highlight">450,00</p>
+									</div>
+								</div>
+								<div class="d-none d-sm-block">
+									<div class="price">1890 <span>руб</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<div class="sale">%</div>
+								<picture>
+									<source srcset="img/googs-img-big.jpg" media="(max-width: 575px)">
+									<source srcset="img/goods-img-2.jpg">
+									<img srcset="img/goods-img-2.jpg" alt="Мое основное изображение">
+								</picture>
+								<h6 class="card-subtitle">Toshiba</h6>
+							</div>
+							<div class="d-flex flex-column">
+								<h3><a href="#">Стиральная машина Miele WDB 020 W1 Classic</a></h3>
+								<div class="card-rating">
+									<div class="rating">
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+									</div>
+									<p class="text-success font-weight-bold">В наличии</p>
+								</div>
+								<div class="price-block">
+									<div>
+										<p class="old-price">1 439,00 руб</p>
+										<p class="price">1890,00 руб</p>
+									</div>
+									<div>
+										<p>экономия</p>
+										<p class="highlight">450,00</p>
+									</div>
+								</div>
+								<div class="d-none d-sm-block">
+									<div class="price">1890 <span>руб</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<div class="sale">%</div>
+								<picture>
+									<source srcset="img/googs-img-big.jpg" media="(max-width: 575px)">
+									<source srcset="img/goods-img-2.jpg">
+									<img srcset="img/goods-img-2.jpg" alt="Мое основное изображение">
+								</picture>
+								<h6 class="card-subtitle">Toshiba</h6>
+							</div>
+							<div class="d-flex flex-column">
+								<h3><a href="#">Стиральная машина Miele WDB 020 W1 Classic</a></h3>
+								<div class="card-rating">
+									<div class="rating">
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+									</div>
+									<p class="text-success font-weight-bold">В наличии</p>
+								</div>
+								<div class="price-block">
+									<div>
+										<p class="old-price">1 439,00 руб</p>
+										<p class="price">1890,00 руб</p>
+									</div>
+									<div>
+										<p>экономия</p>
+										<p class="highlight">450,00</p>
+									</div>
+								</div>
+								<div class="d-none d-sm-block">
+									<div class="price">1890 <span>руб</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<div class="sale">%</div>
+								<picture>
+									<source srcset="img/googs-img-big.jpg" media="(max-width: 575px)">
+									<source srcset="img/goods-img-2.jpg">
+									<img srcset="img/goods-img-2.jpg" alt="Мое основное изображение">
+								</picture>
+								<h6 class="card-subtitle">Toshiba</h6>
+							</div>
+							<div class="d-flex flex-column">
+								<h3><a href="#">Стиральная машина Miele WDB 020 W1 Classic</a></h3>
+								<div class="card-rating">
+									<div class="rating">
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+									</div>
+									<p class="text-success font-weight-bold">В наличии</p>
+								</div>
+								<div class="price-block">
+									<div>
+										<p class="old-price">1 439,00 руб</p>
+										<p class="price">1890,00 руб</p>
+									</div>
+									<div>
+										<p>экономия</p>
+										<p class="highlight">450,00</p>
+									</div>
+								</div>
+								<div class="d-none d-sm-block">
+									<div class="price">1890 <span>руб</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<div class="sale">%</div>
+								<picture>
+									<source srcset="img/googs-img-big.jpg" media="(max-width: 575px)">
+									<source srcset="img/goods-img-2.jpg">
+									<img srcset="img/goods-img-2.jpg" alt="Мое основное изображение">
+								</picture>
+								<h6 class="card-subtitle">Toshiba</h6>
+							</div>
+							<div class="d-flex flex-column">
+								<h3><a href="#">Стиральная машина Miele WDB 020 W1 Classic</a></h3>
+								<div class="card-rating">
+									<div class="rating">
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+									</div>
+									<p class="text-success font-weight-bold">В наличии</p>
+								</div>
+								<div class="price-block">
+									<div>
+										<p class="old-price">1 439,00 руб</p>
+										<p class="price">1890,00 руб</p>
+									</div>
+									<div>
+										<p>экономия</p>
+										<p class="highlight">450,00</p>
+									</div>
+								</div>
+								<div class="d-none d-sm-block">
+									<div class="price">1890 <span>руб</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="d-flex flex-wrap">
+						<div class="item">
+							<div class="img-wrapper">
+								<div class="sale">%</div>
+								<picture>
+									<source srcset="img/googs-img-big.jpg" media="(max-width: 575px)">
+									<source srcset="img/goods-img-2.jpg">
+									<img srcset="img/goods-img-2.jpg" alt="Мое основное изображение">
+								</picture>
+								<h6 class="card-subtitle">Toshiba</h6>
+							</div>
+							<div class="d-flex flex-column">
+								<h3><a href="#">Стиральная машина Miele WDB 020 W1 Classic</a></h3>
+								<div class="card-rating">
+									<div class="rating">
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+									</div>
+									<p class="text-success font-weight-bold">В наличии</p>
+								</div>
+								<div class="price-block">
+									<div>
+										<p class="old-price">1 439,00 руб</p>
+										<p class="price">1890,00 руб</p>
+									</div>
+									<div>
+										<p>экономия</p>
+										<p class="highlight">450,00</p>
+									</div>
+								</div>
+								<div class="d-none d-sm-block">
+									<div class="price">1890 <span>руб</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<div class="sale">%</div>
+								<picture>
+									<source srcset="img/googs-img-big.jpg" media="(max-width: 575px)">
+									<source srcset="img/goods-img-2.jpg">
+									<img srcset="img/goods-img-2.jpg" alt="Мое основное изображение">
+								</picture>
+								<h6 class="card-subtitle">Toshiba</h6>
+							</div>
+							<div class="d-flex flex-column">
+								<h3><a href="#">Стиральная машина Miele WDB 020 W1 Classic</a></h3>
+								<div class="card-rating">
+									<div class="rating">
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+									</div>
+									<p class="text-success font-weight-bold">В наличии</p>
+								</div>
+								<div class="price-block">
+									<div>
+										<p class="old-price">1 439,00 руб</p>
+										<p class="price">1890,00 руб</p>
+									</div>
+									<div>
+										<p>экономия</p>
+										<p class="highlight">450,00</p>
+									</div>
+								</div>
+								<div class="d-none d-sm-block">
+									<div class="price">1890 <span>руб</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<div class="sale">%</div>
+								<picture>
+									<source srcset="img/googs-img-big.jpg" media="(max-width: 575px)">
+									<source srcset="img/goods-img-2.jpg">
+									<img srcset="img/goods-img-2.jpg" alt="Мое основное изображение">
+								</picture>
+								<h6 class="card-subtitle">Toshiba</h6>
+							</div>
+							<div class="d-flex flex-column">
+								<h3><a href="#">Стиральная машина Miele WDB 020 W1 Classic</a></h3>
+								<div class="card-rating">
+									<div class="rating">
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+									</div>
+									<p class="text-success font-weight-bold">В наличии</p>
+								</div>
+								<div class="price-block">
+									<div>
+										<p class="old-price">1 439,00 руб</p>
+										<p class="price">1890,00 руб</p>
+									</div>
+									<div>
+										<p>экономия</p>
+										<p class="highlight">450,00</p>
+									</div>
+								</div>
+								<div class="d-none d-sm-block">
+									<div class="price">1890 <span>руб</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<div class="sale">%</div>
+								<picture>
+									<source srcset="img/googs-img-big.jpg" media="(max-width: 575px)">
+									<source srcset="img/goods-img-2.jpg">
+									<img srcset="img/goods-img-2.jpg" alt="Мое основное изображение">
+								</picture>
+								<h6 class="card-subtitle">Toshiba</h6>
+							</div>
+							<div class="d-flex flex-column">
+								<h3><a href="#">Стиральная машина Miele WDB 020 W1 Classic</a></h3>
+								<div class="card-rating">
+									<div class="rating">
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+									</div>
+									<p class="text-success font-weight-bold">В наличии</p>
+								</div>
+								<div class="price-block">
+									<div>
+										<p class="old-price">1 439,00 руб</p>
+										<p class="price">1890,00 руб</p>
+									</div>
+									<div>
+										<p>экономия</p>
+										<p class="highlight">450,00</p>
+									</div>
+								</div>
+								<div class="d-none d-sm-block">
+									<div class="price">1890 <span>руб</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<div class="sale">%</div>
+								<picture>
+									<source srcset="img/googs-img-big.jpg" media="(max-width: 575px)">
+									<source srcset="img/goods-img-2.jpg">
+									<img srcset="img/goods-img-2.jpg" alt="Мое основное изображение">
+								</picture>
+								<h6 class="card-subtitle">Toshiba</h6>
+							</div>
+							<div class="d-flex flex-column">
+								<h3><a href="#">Стиральная машина Miele WDB 020 W1 Classic</a></h3>
+								<div class="card-rating">
+									<div class="rating">
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+									</div>
+									<p class="text-success font-weight-bold">В наличии</p>
+								</div>
+								<div class="price-block">
+									<div>
+										<p class="old-price">1 439,00 руб</p>
+										<p class="price">1890,00 руб</p>
+									</div>
+									<div>
+										<p>экономия</p>
+										<p class="highlight">450,00</p>
+									</div>
+								</div>
+								<div class="d-none d-sm-block">
+									<div class="price">1890 <span>руб</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<div class="sale">%</div>
+								<picture>
+									<source srcset="img/googs-img-big.jpg" media="(max-width: 575px)">
+									<source srcset="img/goods-img-2.jpg">
+									<img srcset="img/goods-img-2.jpg" alt="Мое основное изображение">
+								</picture>
+								<h6 class="card-subtitle">Toshiba</h6>
+							</div>
+							<div class="d-flex flex-column">
+								<h3><a href="#">Стиральная машина Miele WDB 020 W1 Classic</a></h3>
+								<div class="card-rating">
+									<div class="rating">
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+										<span>&#xe80c;</span>
+									</div>
+									<p class="text-success font-weight-bold">В наличии</p>
+								</div>
+								<div class="price-block">
+									<div>
+										<p class="old-price">1 439,00 руб</p>
+										<p class="price">1890,00 руб</p>
+									</div>
+									<div>
+										<p>экономия</p>
+										<p class="highlight">450,00</p>
+									</div>
+								</div>
+								<div class="d-none d-sm-block">
+									<div class="price">1890 <span>руб</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+				<img src="img/arr-right.png" />
+			</a>
+		</div>	
+	</div>
+	<div class="col-3 d-none d-lg-block">
+	<?php if (@$news): ?>
+		<h2>Новости</h2>
+		<?php foreach($news as $item): ?>
+		<div>
+			<p class="date"><?=strftime('%d/%m/%G', $item['timestamp'])?></p>
+			<h3><a href="#"><?=$item['name']?></a></h3>
+			<p><?=cut_str(strip_tags($item['short_description']), 100)?></p>
+		</div>
+		<?php endforeach; ?>
+	<?php endif; ?>
+	</div>
+</div>
+<div class="banner-wrapper">
+	<a href="#"><img src="img/banner.jpg" /></a>
+</div>
+<div class="d-none d-sm-block mb-3">
+	<h2>Новинки в каталоге</h2>
+	<div class="new-items">
+		<span><a href="#">Багеты</a></span>
+		<span><a href="#">Расчески</a></span>
+		<span><a href="#">Багеты</a></span>
+		<span><a href="#">Расчески</a></span>
+		<span><a href="#">Багеты</a></span>
+		<span><a href="#">Расчески</a></span>
+		<span><a href="#">Багеты</a></span>
+		<span><a href="#">Расчески</a></span>
+		<span><a href="#">Багеты</a></span>
+		<span><a href="#">Расчески</a></span>
+		<span><a href="#">Багеты</a></span>
+		<span><a href="#">Расчески</a></span>
+		<span><a href="#">Багеты</a></span>
+		<span><a href="#">Расчески</a></span>
+		<span><a href="#">Багеты</a></span>
+		<span><a href="#">Расчески</a></span>
+		<span><a href="#">Багеты</a></span>
+		<span><a href="#">Расчески</a></span>
+		<span><a href="#">Багеты</a></span>
+		<span><a href="#">Расчески</a></span>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12 col-lg-9">
+		<?php if (@$reviews): ?>
+		<div class="headers">
+			<h2>Отзывы покупателей</h2>
+			<a href="#">Смотреть все отзывы</a>
+		</div>
+		<div id="carouselReviews" class="review-slider carousel slide" data-ride="carousel">
+			<a class="review-control review-prew d-sm-none" href="#carouselReviews" role="button" data-slide="prev">
+				<img src="img/arr-left.png" />
+			</a>
+			<div class="carousel-inner">
+				<?php foreach($reviews as $item): ?>
+					<div class="carousel-item active col-sm-4">
+						<p class="h3"><?=$item['name']?></p>
+						<p><?php echo $item['content']; ?></p>
+						<div class="d-flex">
+							<div class="rating">
+								<?php for($i=0; $i < 5; $i++): ?>
+								<?php if ($item['rank'] > $i): ?>
+								<span>&#xe80c;</span>
+								<?php else: ?>
+								<span>&#xe80d;</span>
+								<?php endif; ?>
+								<?php endfor; ?>
+							</div>
+							<p class="date ml-3"><?=strftime('%e %B %G', $item['timestamp'])?></p>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+			<a class="control review-next d-sm-none" href="#carouselReviews" role="button" data-slide="next">
+				<img src="img/arr-right.png" />
+			</a>
+		</div>				
+		<?php endif; ?>
+		<h2 class="d-none d-md-flex">Наши преимущества</h2>
+		<div class="row d-none d-md-flex">
+			<div class="adv-item">
+				<div><img src="img/adv-1.png" /></div>
+				<div>
+					<h3>Гарантия качества</h3>
+					<p>Мы продаем только сертифицированный товар с гарантией сервисных центров, чек прилагается.</p>
+				</div>
+			</div>
+			<div class="adv-item">
+				<div><img src="img/adv-3.png" /></div>
+				<div>
+					<h3>Честные цены</h3>
+					<p>Все цены, указанные на сайте, действительны, актуальны и не зависят от выбранной вами формы оплаты.</p>
+				</div>
+			</div>
+			<div class="adv-item">
+				<div><img src="img/adv-5.png" /></div>
+				<div>
+					<h3>Доставка по всей Беларуси</h3>
+					<p>Мы доставляем заказы в Минск, Брест, Витебск, Гомель, Гродно, Могилев и в любую другую точку Беларуси!</p>
+				</div>
+			</div>
+			<div class="adv-item">
+				<div><img src="img/adv-2.png" /></div>
+				<div>
+					<h3>Мгновенные кредиты</h3>
+					<p>Вы можете выбрать кредит среди предложений ведущих банков, рассчитать и оформить его, не выходя из дома.</p>
+				</div>
+			</div>
+			<div class="adv-item">
+				<div><img src="img/adv-4.png" /></div>
+				<div>
+					<h3>Надежный сервис</h3>
+					<p>Мы предлагаем услуги по сборке, установке, настройке, гарантийному и постгарантийному обслуживанию товаров.</p>
+				</div>
+			</div>
+			<div class="adv-item">
+				<div><img src="img/adv-6.png" /></div>
+				<div>
+					<h3>Выгодные покупки</h3>
+					<p>Наш онлайн-гипермаркет предлагает вам выгодные акции, скидки и собственную бонусную программу.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-lg-3 d-flex flex-column">
+		<h2 class="d-none d-md-flex">Присоединяйтесь</h2> 
+		<script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+		<div id="vk_groups" class="vk-mod">
+		</div>
+	</div>
+</div>
+
+<div class="text-container">
+	<h2><?php echo Pages::getName(); ?></h2>
+	<?php echo Pages::getContent(); ?>
+</div>
+<script type="text/javascript">
+	VK.Widgets.Group("vk_groups", {mode: 0, width: "267", height: "460", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 56421194);
+</script>

@@ -1,4 +1,4 @@
-<script type="text/javascript" src="/js/admin/news/grid_news.js"></script>
+<script type="text/javascript" src="/js/admin/advantages/grid_advantages.js"></script>
 <script type="text/javascript">
   $(function () {
     translit('input[name="path"]');
@@ -137,7 +137,6 @@
 				</div>	
 			</form>
 		</div>
-
 
         <table id="le_table"></table>
         <div id="le_tablePager"></div>

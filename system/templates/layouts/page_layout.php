@@ -1,26 +1,24 @@
 <?php Pages::fetchContent(URL::getPath()); ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
-  <head>
-	<title><?php if (isset($title)) { echo @$title; } else { echo Pages::getTitle(); } ?></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="Aver CMS" />
-	<meta name="description" content="<?php  if (isset($description)) { echo @$description; } else { echo Pages::getDescription(); } ?>" />	
-	<meta name="keywords" content="<?php if (isset($keywords)) { echo @$keywords; } else { echo Pages::getKeywords(); } ?>" />
-	<meta name="robots" content="index, follow" />
-	<link rel="stylesheet" type="text/css" href="/css/main.css" />
-	<link rel="canonical" href="<?php echo get_url_canonical(); ?>">		
-	<?php foreach(UI::getCSS() as $css): ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo $css; ?>" />
-	<?php endforeach; ?>	
-	<script src="/js/jquery-3.4.1.min.js"></script>
-	<script src="/js/popper.min.js" ></script>
-	<script src="/js/bootstrap.min.js" ></script>
-	<script src="/js/main.js" ></script>
-	<meta name="yandex-verification" content="34515885633bedad" />	
-	
-</head>
-
+	<head>
+		<title><?php if (isset($title)) { echo @$title; } else { echo Pages::getTitle(); } ?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="Aver CMS" />
+		<meta name="description" content="<?php  if (isset($description)) { echo @$description; } else { echo Pages::getDescription(); } ?>" />	
+		<meta name="keywords" content="<?php if (isset($keywords)) { echo @$keywords; } else { echo Pages::getKeywords(); } ?>" />
+		<meta name="robots" content="index, follow" />
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />
+		<link rel="canonical" href="<?php echo get_url_canonical(); ?>">		
+		<?php foreach(UI::getCSS() as $css): ?>
+			<link rel="stylesheet" type="text/css" href="<?php echo $css; ?>" />
+		<?php endforeach; ?>	
+		<script src="/js/jquery-3.4.1.min.js"></script>
+		<script src="/js/popper.min.js" ></script>
+		<script src="/js/bootstrap.min.js" ></script>
+		<script src="/js/main.js" ></script>
+		<meta name="yandex-verification" content="34515885633bedad" />	
+	</head>
 	<body>
 		<header id="header-collapse">
 			<nav class="navbar navbar-light navbar-expand-md bg-light d-none d-md-flex">

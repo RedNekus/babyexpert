@@ -238,6 +238,10 @@ $config = array (
       'table' => 'np_brand',	  
       'table_lng' => 'np_brand_language',	  
     ),
+    'advantages' => Array (
+      'table' => 'np_advantages',
+      'table_lng' => 'np_advantages_language',
+    ),
     'news' => Array (
       'table' => 'np_news',
       'table_lng' => 'np_news_language',
@@ -259,7 +263,7 @@ $config = array (
         'base_url' => '/news/',
         'admin' => Array (
           'url_segment' => 4,
-          'base_url' => '/admin/akcii/list/',
+          'base_url' => '/admin/news/list/',
         ),
       ),
     ),	

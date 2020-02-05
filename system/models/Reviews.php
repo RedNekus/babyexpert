@@ -19,18 +19,32 @@ class Reviews {
 
   public static function getReviewsForSite($id) {
     $statement = 'SELECT *
-                  FROM `'.self::$_table.'` WHERE id_catalog='.$id.' and active=1 ORDER BY `id` DESC';
+                  FROM `'.self::$_table.'` WHERE id_catalog='.$id.' AND active=1 ORDER BY `id` DESC';
 
     if (($reviews = DB::query($statement)) === FALSE) {
       trigger_error('Ошибка при получении отзывов из БД!', E_USER_ERROR);
     }
 
     return $reviews;
-  }  
+  }
   
   public static function getReviews($order_name, $order, $limit) {
     $statement = 'SELECT *
                   FROM `'.self::$_table.'` 
+                  ORDER BY `'.$order_name.'` '.$order.' 
+				  LIMIT ' . $limit;
+
+    if (($reviews = DB::query($statement)) === FALSE) {
+      trigger_error('Ошибка при получении отзывов из БД!', E_USER_ERROR);
+    }
+
+    return $reviews;
+  }
+  
+  public static function getReviewsForMain($order_name, $order, $limit) {
+    $statement = 'SELECT *
+                  FROM `'.self::$_table.'`
+				  WHERE active=1
                   ORDER BY `'.$order_name.'` '.$order.' 
 				  LIMIT ' . $limit;
 
