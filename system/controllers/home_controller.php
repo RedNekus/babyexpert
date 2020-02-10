@@ -7,7 +7,7 @@ class Home_Controller {
 	  
 		$this->_content['left'] = Render::view('catalog/razdel');
 
-		Load::model(array("Catalog", "Images", "Reviews", "News"));
+		Load::model(array("Catalog", "Images", "Reviews", "News", "Advantages", "Banners"));
 		
 		$this->_config = Config::getParam('modules->catalog');
 		
@@ -20,7 +20,9 @@ class Home_Controller {
 					'items' => Catalog::getCollectionsActive(255,'prioritet','DESC',9),
 					'makers' => Maker::getMakersForSite("active=1", "name", "ASC", Maker::getTotalMakers()),	
 					'reviews' => Reviews::getReviewsForMain('timestamp', 'DESC', 3),
+					'advantages' => Advantages::getAdvantages('prioritet', 'ASC', 6),
 					'news' => News::getNews('timestamp', 'DESC', 3),
+					'banners' => Banners::getBannersActive("prioritet","DESC"),
 					'imagepath' => $this->_config['image'],
 					'i' => 1
 					

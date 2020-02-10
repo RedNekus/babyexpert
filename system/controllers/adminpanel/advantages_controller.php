@@ -18,7 +18,15 @@ class Advantages_Controller {
 		Render::layout('adminpanel/adminpanel', $this->_content);
 	   
 	}
-
+	private static function loadImage() {
+		if(isset($_FILES['image_file'])) {
+			$uploaddir = './assets/images/advantages';
+			if(!is_dir($uploaddir))
+				mkdir($uploaddir, 0777);
+			$uploadfile = $uploaddir."/".basename($_FILES['image_file']['name']);
+			copy($_FILES['image_file']['tmp_name'], $uploadfile);
+		}
+	}
     public function loadAction() {
 		// Начало формирование объекта
 		$data = array();
@@ -45,7 +53,7 @@ class Advantages_Controller {
 
 			$data['rows'][$i]['id'] = $item['id'];
 			$data['rows'][$i]['cell'][] = $item['id'];
-			$data['rows'][$i]['cell'][] = $item['name'];
+			$data['rows'][$i]['cell'][] = $item['title'];
 			$data['rows'][$i]['cell'][] = (($item['active']!=0) ? 'Да' : 'Нет');
 			$data['rows'][$i]['cell'][] = $item['prioritet'];
 			$data['rows'][$i]['cell'][] = $item['timestamp'];
@@ -64,36 +72,29 @@ class Advantages_Controller {
 		
 		// ДОБАВИТЬ элемент в таблицу
 		if (isset($_POST['action']) and $_POST['action']=="add") {
-			$data = array(
-				'title' => $_POST['title'],
-				'keywords' => $_POST['keywords'],
-				'description' => $_POST['description'],		  
-				'name' => $_POST['name'],			  		  		  
+			$data = array(	  
+				'title' => $_POST['title'],			  		  		  
 				'active' => ((isset($_POST['active'])) ? 1 : 0),
-				'short_description' => $_POST['short_description'],
-				'path' => $_POST['path'],
-				'prioritet' => $_POST['prioritet'],			
-				'namefull' => $_POST['namefull'],
+				'description' => $_POST['description'],
+				'image' => isset($_POST['image'])? $_POST['image'] : "/assets/images/advantages/".$_FILES['image_file']['name'],
+				'prioritet' => $_POST['prioritet'],
 				'timestamp' => $_POST['timestamp']
 			);		
 			
 			Database::insert($this->_table,$data);
 				
-			$id_news_lng = Database::getLastId($this->_table);	
+			$id_advantages_lng = Database::getLastId($this->_table);	
 		
 			$data_lng = array(
-				'id_news_lng' => $id_news_lng,
+				'id_advantages_lng' => $id_advantages_lng,
 				'id_language' => 2,
-				'name_lng' => $_POST['name_lng'],
-				'namefull_lng' => $_POST['namefull_lng'],
-				'short_description_lng' => $_POST['short_description_lng'],				
 				'title_lng' => $_POST['title_lng'],
-				'keywords_lng' => $_POST['keywords_lng'],
-				'description_lng' => $_POST['description_lng']
+				'description_lng' => $_POST['description_lng'],				
+				'title_lng' => $_POST['title_lng']
 			);	
 					
 			Database::insert($this->_table_lng,$data_lng);
-				
+			self::loadImage();
 		}
 
 		// РЕДАКТИРОВАТЬ элемент в таблице
@@ -104,14 +105,10 @@ class Advantages_Controller {
 
 			$data = array( 
 				'title' => $_POST['title'],
-				'keywords' => $_POST['keywords'],
-				'description' => $_POST['description'],		  
-				'name' => $_POST['name'],			  		  		  
+				'description' => $_POST['description'],		  		  		  		  
 				'active' => ((isset($_POST['active'])) ? 1 : 0),
-				'short_description' => $_POST['short_description'],
-				'path' => $_POST['path'],
-				'prioritet' => $_POST['prioritet'],			
-				'namefull' => $_POST['namefull'],
+				'image' => isset($_POST['image'])? $_POST['image'] : "/assets/images/advantages/".$_FILES['image_file']['name'],
+				'prioritet' => $_POST['prioritet'],
 				'timestamp' => $_POST['timestamp']
 			);	
 				
@@ -119,27 +116,23 @@ class Advantages_Controller {
 			Database::update($this->_table,$data,$where);
 						
 			$data_lng = array(
-				'id_news_lng' => $id,
+				'id_advantages_lng' => $id,
 				'id_language' => 2,
-				'name_lng' => $_POST['name_lng'],
-				'namefull_lng' => $_POST['namefull_lng'],
-				'short_description_lng' => $_POST['short_description_lng'],				
 				'title_lng' => $_POST['title_lng'],
-				'keywords_lng' => $_POST['keywords_lng'],
 				'description_lng' => $_POST['description_lng']
 			);	
 			
 			$id_lng = $_POST['id_lng'];
 			$where_lng = "`id_lng` = $id_lng";
-			Database::update($this->_table_lng,$data_lng,$where_lng);			
-			
+			Database::update($this->_table_lng,$data_lng,$where_lng);
+			self::loadImage();
 		}
 		
 		// УДАЛИТЬ элемент из таблицы
 		if (isset($_POST['del_id']))  {
 			$id = $_POST['del_id'];
 			Database::delete($this->_table,$id);
-			Database::delete($this->_table_lng,$id,'id_news_lng');
+			Database::delete($this->_table_lng,$id,'id_advantages_lng');
 		}	
 		
 	}
@@ -149,7 +142,7 @@ class Advantages_Controller {
 		$data = array();
 		$id_language = 2;
 		$data = Database::getRow($this->_table,$_POST['id']);
-		$data['language'] = Database::getRow($this->_table_lng,$_POST['id'],'id_news_lng',$id_language);
+		$data['language'] = Database::getRow($this->_table_lng,$_POST['id'],'id_advantages_lng',$id_language);
 		echo json_encode($data);
 	}
 }

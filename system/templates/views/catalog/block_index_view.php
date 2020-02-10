@@ -1,25 +1,31 @@
 <?php 
-  $active = "";
-  //$url_path = URL::getSegment(1);
-  Pages::fetchContent(URL::getPath());
+	$active = "";
+	//$url_path = URL::getSegment(1);
+	Pages::fetchContent(URL::getPath());
+	if(@$banners) { 
+		$path = Config::getParam('modules->banners->image');
+		$num = count($banners);
+	}
 ?>
 <div class="slider-container">
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="img/slider.jpg" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="img/slider.jpg" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="img/slider.jpg" class="d-block w-100" alt="...">
-			</div>
+			<?php foreach($banners as $n=>$banner): ?>
+				<div class="carousel-item<?=($n? '' : ' active')?>">
+				<?php if ($banner['path']): ?>
+					<a href="<?php echo $banner['path']; ?>" title="<?php echo $banner['name']; ?>" target="_ablank">
+						<img src="<?php echo $path['big']['path'].$banner['image']; ?>" alt="<?php echo $banner['name']; ?>" />
+					</a>
+				<?php else: ?>
+					<img src="<?php echo $path['big']['path'].$banner['image']; ?>" alt="<?php echo $banner['name']; ?>" />
+				<?php endif; ?>	
+				</div>
+			<?php endforeach; ?>
 		</div>
 		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			<?php for($i=0; $i < $num; $i++): ?>
+			<li data-target="#carouselExampleIndicators" data-slide-to="<?=$i?>"<?=($i? '' : 'class="active"')?>></li>
+			<?php endfor; ?>
 		</ol>
 	</div>
 	<div class="goods-block">
@@ -592,51 +598,20 @@
 			</a>
 		</div>				
 		<?php endif; ?>
+		<?php if (@$advantages): ?>
 		<h2 class="d-none d-md-flex">Наши преимущества</h2>
 		<div class="row d-none d-md-flex">
+			<?php foreach($advantages as $item): ?>
 			<div class="adv-item">
-				<div><img src="img/adv-1.png" /></div>
+				<div><img src="<?php echo $item['image']; ?>" /></div>
 				<div>
-					<h3>Гарантия качества</h3>
-					<p>Мы продаем только сертифицированный товар с гарантией сервисных центров, чек прилагается.</p>
+					<h3><?php echo $item['title']; ?></h3>
+					<?php echo $item['description']; ?>
 				</div>
 			</div>
-			<div class="adv-item">
-				<div><img src="img/adv-3.png" /></div>
-				<div>
-					<h3>Честные цены</h3>
-					<p>Все цены, указанные на сайте, действительны, актуальны и не зависят от выбранной вами формы оплаты.</p>
-				</div>
-			</div>
-			<div class="adv-item">
-				<div><img src="img/adv-5.png" /></div>
-				<div>
-					<h3>Доставка по всей Беларуси</h3>
-					<p>Мы доставляем заказы в Минск, Брест, Витебск, Гомель, Гродно, Могилев и в любую другую точку Беларуси!</p>
-				</div>
-			</div>
-			<div class="adv-item">
-				<div><img src="img/adv-2.png" /></div>
-				<div>
-					<h3>Мгновенные кредиты</h3>
-					<p>Вы можете выбрать кредит среди предложений ведущих банков, рассчитать и оформить его, не выходя из дома.</p>
-				</div>
-			</div>
-			<div class="adv-item">
-				<div><img src="img/adv-4.png" /></div>
-				<div>
-					<h3>Надежный сервис</h3>
-					<p>Мы предлагаем услуги по сборке, установке, настройке, гарантийному и постгарантийному обслуживанию товаров.</p>
-				</div>
-			</div>
-			<div class="adv-item">
-				<div><img src="img/adv-6.png" /></div>
-				<div>
-					<h3>Выгодные покупки</h3>
-					<p>Наш онлайн-гипермаркет предлагает вам выгодные акции, скидки и собственную бонусную программу.</p>
-				</div>
-			</div>
+			<?php endforeach; ?>
 		</div>
+		<?php endif; ?>
 	</div>
 	<div class="col-12 col-lg-3 d-flex flex-column">
 		<h2 class="d-none d-md-flex">Присоединяйтесь</h2> 
@@ -647,7 +622,6 @@
 </div>
 
 <div class="text-container">
-	<h2><?php echo Pages::getName(); ?></h2>
 	<?php echo Pages::getContent(); ?>
 </div>
 <script type="text/javascript">

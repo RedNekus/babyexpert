@@ -8,48 +8,24 @@ class Advantages {
 		self::$_table = self::$_config['table'];
 	}
   
-	public static function getNewsByID($id) {
-	
-		$statement = 'SELECT * FROM `'.self::$_table.'` WHERE `id` = :id';
-
-		if (($news = DB::query($statement, array('id' => $id), TRUE)) === FALSE) {
-			trigger_error('Ошибка при получении новостей из БД', E_USER_ERROR);
-		}
-
-		return $news;
-		
-	}  
-	
-	public static function getNewsByPath($path) {
-	
-		$statement = 'SELECT * FROM `'.self::$_table.'` WHERE `path` = :path';
-
-		if (($news = DB::query($statement, array('path' => $path), TRUE)) === FALSE) {
-			trigger_error('Ошибка при получении новостей из БД', E_USER_ERROR);
-		}
-
-		return $news;
-		
-	}
-  
-	public static function getNews($order_name, $order, $limit) {
+	public static function getAdvantages($order_name, $order, $limit) {
 
 		$statement = 'SELECT * FROM `' . self::$_table . '` ORDER BY `'.$order_name.'` '.$order.' LIMIT ' . $limit;
 		
 		if (($makers = DB::query($statement)) === FALSE) {
-			trigger_error('Ошибка при получении новостей из БД', E_USER_ERROR);
+			trigger_error('Ошибка при получении списка преимуществ из БД', E_USER_ERROR);
 		}
 
 		return $makers;
 	
 	} 
  
-	public static function getTotalNews() {
+	public static function getTotalAdvantages() {
 	  
 		$statement = 'SELECT count(*) as `count` FROM `' . self::$_table . '`';
 
 		if (($count = DB::query($statement, '', TRUE, 'count')) === FALSE) {
-			trigger_error('Ошибка при получении количества новостей в БД!', E_USER_ERROR);
+			trigger_error('Ошибка при получении количества преимуществ в БД!', E_USER_ERROR);
 		}
 
 		return $count;
@@ -82,7 +58,7 @@ class Advantages {
 
 	}
 	
-	public static function addNews($data) {
+	public static function addAdvantages($data) {
 		
 		$statement = 'INSERT INTO `'.self::$_table.'`
 						(`active`, `name`, `namefull`, `path`, `prioritet`, `short_description`, `title`, `keywords`, `description`, `timestamp`)
@@ -90,12 +66,12 @@ class Advantages {
 						(:active, :name, :namefull, :path, :prioritet, :short_description, :title, :keywords, :description, :timestamp)';
 
 		if (DB::query($statement, $data) === FALSE) {
-			trigger_error('Ошибка при добавлении новостей в БД!', E_USER_ERROR);
+			trigger_error('Ошибка при добавлении преимущества в БД!', E_USER_ERROR);
 		}
 		
 	}
   
-	public static function updateNews($data) {
+	public static function updateAdvantages($data) {
 	
 		$statement = 'UPDATE `'.self::$_table.'`
 						SET `active` = :active,
@@ -111,12 +87,12 @@ class Advantages {
 					  WHERE `id` = :id';
 
 		if (DB::query($statement, $data) === FALSE) {
-			trigger_error('Ошибка при обновлении описания новостей в БД!', E_USER_ERROR);
+			trigger_error('Ошибка при обновлении описания преимуществ в БД!', E_USER_ERROR);
 		}
 		
 	}
   
-	public static function removeNews($id) {
+	public static function removeAdvantages($id) {
 
 		$statement = 'DELETE FROM `'.self::$_table.'`
 					  WHERE `id` = :id;';
@@ -124,7 +100,7 @@ class Advantages {
 		$params = array ('id' => $id);
 
 		if (DB::query($statement, $params) === FALSE) {
-			trigger_error('Ошибка при удалении новостей из БД!', E_USER_ERROR);
+			trigger_error('Ошибка при удалении преимуществ из БД!', E_USER_ERROR);
 		}
 
 	}

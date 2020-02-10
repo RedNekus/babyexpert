@@ -172,7 +172,6 @@ $(document).ready(function() {
 	}
 	
 	function filtReset() {
-		console.log('TEST TEST TEST');
 		TableCatalog.jqGrid('setGridParam',{search:false});
 
 		var postData = TableCatalog.jqGrid('getGridParam','postData');
